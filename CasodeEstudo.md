@@ -10,9 +10,18 @@
 
 ## História
 
-Angelo é um homem comum de uma realidade futurista, 
+Angelo é um homem comum de uma realidade futurista, que toda manhã acorda
+com seu relógio inteligente em um determinado horário
 
 ## Aplicações
 
 ## Objetos
+
+Geladeira inteligente
+
+Relógio inteligente
+
+Comedouro inteligente
+
+Armário inteligente
 
