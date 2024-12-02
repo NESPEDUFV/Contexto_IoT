@@ -79,12 +79,24 @@ telas como **televisão inteligente**, se estavam ligados, desligam.
 21. Rastreamento inteligente 
 
 ## Contextos
+1. Tamanho de tela
+2. Pixels de camera
+3. Tampa de privacidade da camera
+4. Conectividade wifi
+5. Hardware de Audio 
+6. Processador
+7. Conectividade Bluetooth
+8. Peso
+9. Dimensões
+10. Hardware de microfone
+11. Alimentação de energia
+
 TODO: pegar os contextos dos objetos
 TODO: linkar aplicações com objetos
 TODO: terminar desenho da casa 
 
 ## Objetos
-1.  Alexa
+1.  Alexa *
 2.  Armário inteligente
 3.  Ar-condicionado Inteligente
 4.  Anel inteligente 
