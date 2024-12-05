@@ -172,54 +172,87 @@ TODO: terminar desenho da casa
 23. Janelas inteligentes 
 25. Lampadas inteligentes 
 26. Lava-louças inteligente *
-27. Mangueira inteligente *
-28. Panela inteligente 
-29. Piso inteligente 
-30. Portas inteligentes 
-31. Relógio inteligente 
-32. Robô aspirador de pó inteligente 
-33. Sensor de umidade do solo 
-34. Medidores de PH da agua
-35. Sensor de monóxido de carbono
-36. Sensor de nitrogênio do solo
-37. Sensor de fósforo do solo
-38. Sensor de potássio do solo
-39. Sensor de Ph do solo
-40. Sensor de dióxido de carbono do solo
-41. Sensor de salinidade do solo
-42. Sensor de fumaça
-43. Sensor de precipitação
-44. Televisão inteligente 
+27. Panela inteligente 
+28. Piso inteligente 
+29. Portas inteligentes 
+30. Relógio inteligente 
+31. Robô aspirador de pó inteligente 
+32. Sensor de umidade do solo 
+33. Medidores de PH da agua
+34. Sensor de monóxido de carbono
+35. Sensor de nitrogênio do solo
+36. Sensor de fósforo do solo
+37. Sensor de potássio do solo
+38. Sensor de Ph do solo
+39. Sensor de dióxido de carbono do solo
+40. Sensor de salinidade do solo
+41. Sensor de fumaça
+42. Sensor de precipitação
+43. Televisão inteligente 
 
 ## Desenho da casa
 
+![Casa inteligente](casaInteligente.png)
+
+
 Legenda de cores: (posição [x;y])
+
 humano com: Anel inteligente, colar inteligente, relógio inteligente [anda aleatóriamente]
+
 Verde agua: Computador [sempre na posição 6;16]
+
 azul claro: espelho inteligente
+
 azul escuro: televisão
+
 verde: echo Dot (alexa)
+
 branco: cameras
+
 roxo: coleira inteligente (gato)
+
 sofá [9; 13]
+
 cama [3; 18]
+
 Guarda roupa [8; 18]
+
 armário da cozinha
+
 armario do banheiro
+
 fogão [19; 19]
+
 carro [6; 17]
+
 televisão
+
 janelas inteligentes + cortinas inteligentes
+
 Comedouro inteligente [18;16]
+
 Robo aspirador de pó inteligente [anda pela casa, sempre volta pra 2;14]
+
 chuveiro inteligente [9 ;19]
+
 piso inteligente [cada quadrado no interiror da casa]
+
 Geladeira inteligente [14; 19]
+
 Embalagens inteligentes [espalhados dentro da geladeira inteligente e armários inteligentes]
+
 Escova inteligente [no armário do banheiro]
+
 laranja: gotejador inteligente
+
 lampada inteligente: [todo comodo terá uma no centro dele]
+
 panela inteligente: [uma no fogão e algumas no armário da cozinha]
+
 sensor de fumaça: [todo comodo terá uma no centro dele]
+
 sensores de [33 a 41] em cada uma das plantas do lado de fora da casa
+
 Sensor de precipitação [junto com o gotejador inteligente]
+
+Vermelho: máquina de lavar louça inteligente
