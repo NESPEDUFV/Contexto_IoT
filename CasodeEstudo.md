@@ -171,8 +171,8 @@ TODO: terminar desenho da casa
 22. Guarda-roupa inteligente [1, 4, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22]
 23. Janelas inteligentes 
 25. Lampadas inteligentes 
-26. Lava-louças inteligente 
-27. Mangueira inteligente 
+26. Lava-louças inteligente *
+27. Mangueira inteligente *
 28. Panela inteligente 
 29. Piso inteligente 
 30. Portas inteligentes 
@@ -193,10 +193,33 @@ TODO: terminar desenho da casa
 
 ## Desenho da casa
 
-Legenda de cores:
-Verde agua: Computador
+Legenda de cores: (posição [x;y])
+humano com: Anel inteligente, colar inteligente, relógio inteligente [anda aleatóriamente]
+Verde agua: Computador [sempre na posição 6;16]
 azul claro: espelho inteligente
 azul escuro: televisão
 verde: echo Dot (alexa)
 branco: cameras
 roxo: coleira inteligente (gato)
+sofá [9; 13]
+cama [3; 18]
+Guarda roupa [8; 18]
+armário da cozinha
+armario do banheiro
+fogão [19; 19]
+carro [6; 17]
+televisão
+janelas inteligentes + cortinas inteligentes
+Comedouro inteligente [18;16]
+Robo aspirador de pó inteligente [anda pela casa, sempre volta pra 2;14]
+chuveiro inteligente [9 ;19]
+piso inteligente [cada quadrado no interiror da casa]
+Geladeira inteligente [14; 19]
+Embalagens inteligentes [espalhados dentro da geladeira inteligente e armários inteligentes]
+Escova inteligente [no armário do banheiro]
+laranja: gotejador inteligente
+lampada inteligente: [todo comodo terá uma no centro dele]
+panela inteligente: [uma no fogão e algumas no armário da cozinha]
+sensor de fumaça: [todo comodo terá uma no centro dele]
+sensores de [33 a 41] em cada uma das plantas do lado de fora da casa
+Sensor de precipitação [junto com o gotejador inteligente]
