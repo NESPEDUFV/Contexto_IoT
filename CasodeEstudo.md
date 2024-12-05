@@ -151,9 +151,9 @@ TODO: terminar desenho da casa
 2.  Armário inteligente [4, 8, 47, 48, 49, 11, 12, 14, 18, 21, 22]
 3.  Ar-condicionado Inteligente [4, 8, 47, 48, 49, 11, 12, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, tC, 41, 42, 43, 44, 45, 46, 52]
 4.  Anel inteligente [4, 7, 8, 11, 12, 48, 50, 51, 52, 53, 54, 55, 56, 57, 58]
-5.  Cafeteira inteligente 
-6.  Cama inteligente 
-7.  Camisa inteligente 
+5.  Cafeteira inteligente [4, 8, 9, 11, 23, 47, 48, 49, 59, 60]
+6.  Cama inteligente *
+7.  Camisa inteligente [4, 8, 11, 12, 23, 47, 48, 49, ]
 8.  Camera inteligente 
 9.  Chuveiro inteligente 
 10. Computador inteligente 
@@ -192,3 +192,11 @@ TODO: terminar desenho da casa
 44. Televisão inteligente 
 
 ## Desenho da casa
+
+Legenda de cores:
+Verde agua: Computador
+azul claro: espelho inteligente
+azul escuro: televisão
+verde: echo Dot (alexa)
+branco: cameras
+roxo: coleira inteligente (gato)
