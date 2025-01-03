@@ -144,7 +144,6 @@ telas como **televisão inteligente**, se estavam ligados, desligam.
 
 TODO: pegar os contextos dos objetos
 TODO: linkar aplicações com objetos
-TODO: terminar desenho da casa 
 
 ## Objetos
 1.  Alexa [1, 2, 3, 4, 5, 6, 7, 8, 47, 48, 49, 10, 11]
