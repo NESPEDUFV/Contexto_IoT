@@ -22,7 +22,7 @@ na análise que a **escova inteligente** fez, e toma um banho no seu
 prepara seu café para comer com um pão fresquinho que sua máquina de fazer 
 pão começou a fazer na noite passada.
 
-Quando chega na cozinha, as **cortinas inteligentes** e **janelas inteligentes** se abrem para aproveitar a luz do dia. Nesse momento, o **termostato inteligente** analisa o ambiente e ajusta a temperatura para ficar mais confortável, ligando o **ar-condicionado inteligente**
+Quando chega na cozinha, as **cortinas inteligentes** e **janelas inteligentes** se abrem para aproveitar a luz do dia. Nesse momento, o termostato analisa o ambiente e ajusta a temperatura para ficar mais confortável, ligando o **ar-condicionado inteligente**
 
 Mas hoje ele está com vontade de comer ovos mexidos também. Então, ele vai no 
 seu **armário inteligente** e pega os ingredientes. Nesse momento, o armário
@@ -58,51 +58,50 @@ telas como **televisão inteligente**, se estavam ligados, desligam.
 1.  Detecção de quedas
 2.  Controle de microprocessadores através de voz, aplicação mobile ou 
     aplicação web 
-3.  Cuidados com animais de estimação
-4.  Sistemas que monitoram a qualidade de ambientes dentro/fora de casa
-5.  Sistema de aviso de emergêcia 
-6.  Gerenciamento de gasto de energia
-7.  Gerenciamento de gasto de agua
-8.  Sistema de segurança e privacidade inteligente
-9.  Sistema de localização interno (Fingerprint based)
-10. Sistema detector de gás
-11. Sistemas de cuidado com a saúde 
-12. Sistemas de controle de luz
-13. Controladores de temperatura e umidade
-14. Aplicações com RFID
-15. Aplicações de entretenimento
-16. Serviço de limpeza inteligente
-17. Jardim inteligente
-18. Locomoção inteligente
-19. Cocção inteligente
-20. Gerenciamento de inventário
+3.  Cuidados com animais de estimação (batimentos cardiacos, alimentação
+    na hora correta, mensagens de emergêcia, camera)
+4.  Gerenciamento de gasto de energia (monitoramento e redução de consumo)
+5.  Gerenciamento de gasto de agua (monitoramento e redução de consumo)
+6.  Sistema de segurança e privacidade inteligente (alarmes, autolock)
+7.  Sistema de localização interno (Fingerprint based)
+8.  Sistema detector de gases perigosos
+9.  Sistemas de cuidado com a saúde (batimentos cardiacos)
+10. Sistemas de controle de luz 
+11. Controladores de temperatura e umidade
+12. Aplicações com RFID (abrir portão, liberar ração)
+13. Serviço de limpeza inteligente (robo aspirador, 
+    fechar janelas se muito vento)
+14. Jardim inteligente (regar as plantas quando necessário)
+15. Locomoção inteligente (carro inteligente andando)
+16. Cocção inteligente (fogão inteligente)
+17. Gerenciamento de inventário 
 
 ## Contextos
 1. Tamanho de tela [1080x720]
 2. Pixels de camera [13MP]
-3. Tampa de privacidade da camera[aberto/fechado]
+3. aberto/fechado
 4. Conectividade wifi [802.11b/g/n (2,4 GHz e 5 GHz)]
-5. Hardware de Audio 
-6. Processador
+5. Hardware de Som 
+6. Processador 
 7. Conectividade Bluetooth
 8. Peso do objeto [45kg]
-9. Disponibilidade de idioma
-10. Hardware de microfone
-11. Alimentação de energia [USB-C, bateria 24mAh Lipo]
-12. Cor [azul]
-13. Tipo de tela [touch]
-14. Capacidade [15 itens]
-15. Programa em Execução [higienização, secagem, desodorização]
-16. Programas [higienização, secagem, desodorização]
-17. Luz interna [ligado/desligado]
-18. Cabide móvel [s/n]
-19. Porta reversível [s/n]
+9. Disponibilidade de idioma [pt-br, en-us]
+10. Idioma atual
+11. Hardware de microfone
+12. Alimentação de energia [USB-C, bateria 24mAh Lipo]
+13. Cor [azul]
+14. Temperatura de iluminação
+15. Tipo de tela [touch]
+16. Capacidade total [15 itens, litros]
+17. Programa em Execução [secagem]
+18. Programas [Automático, Frio, Seco, Ventilador]
+19. Luz interna [ligado/desligado]
 20. Peso da prateleira [14kg]
 21. Quantidade de itens internos[12]
 22. Garantia [10 anos]
-23. Ventila? [sim]
+23. Ventilando [sim]
 24. Velocidade de ventilação [5/4]
-25. Capacidade de Resfriamento(min/max) [1.61 ~ 6.45 kW.]
+25. Capacidade de Resfriamento(min/max) [1.61 ~ 6.45 kW]
 26. Capacidade de Aquicimento(min/max) [1.17 ~ 6.30 kW]
 27. Nível de ruído [43dBA] 
 28. Classificação energética [A]
@@ -110,127 +109,130 @@ telas como **televisão inteligente**, se estavam ligados, desligam.
 30. Corrente de operação (Resfriamento) [7.7A]
 31. Corrente de operação (Aquecimento) [7.5A]
 32. Tipo de compressor [BLDC]
-33. Comprimento da tubulação [30m]
-34. Altura da Tubulação [15m]
-35. Remoção de Umidade (l/h): [2.0 l/hr]
-36. Circulação de Ar (Resfriamento): [17.9 m3/min]
-37. Gás Refrigerante: [R410A]
-38. Carga de Gás Refrigerante (kg): [1.11 kg ]
-39. Carga de Gás Refrigerante (tCO2e): [2.32 tCO2e ]
-40. Ambiente Baixo (Resfriamento): [-10 ~ 46 °C ]
-41. Ambiente Baixo (Aquecimento): [-15 ~ 24 °C]
-42. Posição da aba: [cima]
-43. Filtro: [antialérgico removível]
-44. Voltagem [120V]
-45. Área de cobertura [42m²]
-46. Comprimento [20cm]
-47. Largura [4mm]
-48. Profundidade [42m]
-49. Espessura [15mm]
-50. Porcentagem da Bateria [45%]
-51. Tipos de sensores existentes [temperatura, acelerômetro, frequencia cardiaca]
-52. Compatibilidade (SO) [iOS, Android]
-53. Material [Prata]
-54. Tempo de carregamento da bateria
-55. Grau de proteção IP
-56. Condições de temperatura de armazenamento
-57. Condições de umidade de armazenamento
-58. Marca
-59. Nome
-60. Duração da bateria (tempo) [5 dias]
-61.  
+33. Remoção de Umidade (l/h): [2.0 l/hr]
+34. Circulação de Ar (Resfriamento): [17.9 m3/min]
+35. Gás Refrigerante: [R410A]
+36. Carga de Gás Refrigerante (kg): [1.11 kg ]
+37. Posição da aba: [cima]
+38. Filtro [antialérgico removível]
+39. Voltagem [120V]
+40. Área de cobertura [42m²]
+41. Comprimento [20cm]
+42. Largura [4mm]
+43. Profundidade [42m]
+44. Espessura [15mm]
+45. Porcentagem da Bateria [45%]
+46. Tipos de sensores existentes [temperatura, acelerômetro, frequencia cardiaca]
+47. Compatibilidade (SO) [iOS, Android]
+48. Material [Prata]
+49. Tempo de carregamento da bateria
+50. Grau de proteção IP
+51. Condições de temperatura de armazenamento
+52. Condições de umidade de armazenamento
+53. Marca
+54. Nome
+55. Ligado/desligado
+56. Detecção de presença [true/false]
+57. umidade interna
+58. pH interno
+59. presença microbiana interna
+60. Valvula de vapor [aberta/fechada]
+61. Temperatura interna Refrigerador: 1º a 7º
+62. Temperatura interna Freezer:-15ºC a -23ºC.
+63. Capacidade Refrigerador [270 L]
+64. Capacidade Freezer [100 L]
+65. Temperatura interna Forno
 
 TODO: pegar os contextos dos objetos
-TODO: linkar aplicações com objetos
 
 ## Objetos
-1.  Alexa 
+1.  Alexa (caixa de som)
     Aplicações [2, 5, 12, 13, 15, 16, 17, 19, 20, 21] 
-    Contextos [1, 2, 3, 4, 5, 6, 7, 8, 46, 47, 48, 10, 11]
+    Contextos 
 2.  Armário inteligente 
     Aplicações [20] 
-    Contextos [4, 8, 46, 47, 48, 11, 12, 14, 18, 21, 22, 58, 59]
+    Contextos 
 3.  Ar-condicionado Inteligente 
     Aplicações [3, 4, 6, 13] 
-    Contextos [4, 8, 46, 47, 48, 11, 12, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39,40, 41, 42, 43, 44, 45, 52, 58, 59]
+    Contextos 
 4.  Anel inteligente 
     Aplicações [1, 5, 9, 11, 14] 
-    Contextos [4, 7, 8, 11, 12, 47, 49, 50, 51, 52, 53, 54, 55, 56, 57, 60]
+    Contextos 
 5.  Cafeteira inteligente 
     Aplicações [19] 
-    Contextos [4, 8, 9, 11, 22, 46, 47, 48, 58, 59]
-6.  **Cama inteligente**
+    Contextos 
+6.  Cama inteligente
     Aplicações [11]
-    Contextos []
+    Contextos 
 7.  Camisa inteligente 
     Aplicações [11] 
-    Contextos [4, 8, 11, 12, 22, 46, 47, 48, 52]
+    Contextos 
 8.  Camera inteligente
     Aplicações [1, 3, 5, 8, 9, 20]
-    Contextos [] 
+    Contextos 
 9.  Chuveiro inteligente 
     Aplicações [7]
-    Contextos []
+    Contextos 
 10. Computador inteligente 
     Aplicações [6, 15]
-    Contextos []
+    Contextos 
 11. Carro inteligente 
     Aplicações [18]
-    Contextos []
+    Contextos 
 12. Colar inteligente 
     Aplicações [1, 9, 11, 14] 
-    Contextos [7, 8, 9, 10, 11, 23, 46, 51, 52, 53, 54, 55, 59, 60, 61]
+    Contextos 
 13. Coleira inteligente
     Aplicações [3, 9, 14]
-    Contextos [] 
+    Contextos 
 14. Comedouro inteligente
     Aplicações [3]
-    Contextos [] 
+    Contextos 
 15. Cortinas inteligentes
     Aplicações [12]
-    Contextos [] 
+    Contextos 
 16. Embalagem inteligente 
     Aplicações [11, 19]
-    Contextos []
+    Contextos 
 17. Escova inteligente 
     Aplicações [11]
-    Contextos []
+    Contextos 
 18. Espelho inteligente
     Aplicações [15]
-    Contextos [] 
+    Contextos 
 19. Fogão inteligente
     Aplicações [19, 6]
-    Contextos [] 
+    Contextos 
 20. Geladeira inteligente
     Aplicações [20, 6]
-    Contextos [] 
+    Contextos 
 21. Gotejador inteligente
     Aplicações [7, 17]
-    Contextos [] 
+    Contextos 
 22. Guarda-roupa inteligente 
     Aplicações [15] 
-    Contextos [1, 4, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22]
+    Contextos 
 23. Janelas inteligentes 
     Aplicações [12]
-    Contextos []
+    Contextos 
 24. Lampadas inteligentes 
     Aplicações [6, 12]
-    Contextos []
-25. **Lava-louças inteligente**
+    Contextos 
+25. Lava-louças inteligente
     Aplicações [16]
-    Contextos []
+    Contextos 
 26. Panela inteligente 
     Aplicações [19]
-    Contextos []
+    Contextos 
 27. Piso inteligente 
     Aplicações [1, 9]
-    Contextos []
+    Contextos 
 28. Portas inteligentes 
     Aplicações [8, 14]
-    Contextos []
+    Contextos 
 29. Relógio inteligente 
     Aplicações [1, 11, 15]
-    Contextos []
+    Contextos 
 30. Robô aspirador de pó inteligente 
     Aplicações [9, 16]
     Contextos []

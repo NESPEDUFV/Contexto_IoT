@@ -12,7 +12,8 @@ A plataforma consiste em
 
 Eles usaram um estudo de casa de cidade inteligente: “Smart parking and charging for electrical vehicles”
 
-Um número notável de abordagens de gerenciamento de contexto foi proposto pela comunidade de pesquisa [3-6]. As principais funcionalidades dessas plataformas de middleware de gerenciamento de contexto podem ser subdivididas em seis classes principais
+Um número notável de abordagens de gerenciamento de contexto foi proposto pela comunidade de pesquisa [3-6]. As principais funcionalidades dessas plataformas de middleware de gerenciamento de contexto podem ser subdivididas em seis classes principais:
+
 1. Raw Data Acquisition (Aquisição de dados brutos)
 2. Context Storage (Armazenamento de contexto)
 3. Context Lookup and Discovery (Consulta e descoberta de contexto)
@@ -26,5 +27,18 @@ O CoaaS permite que os aplicativos forneçam e consumam contexto perfeitamente, 
 
 (O que é silos?)
 sources of context
+
+
+Leitura Parte 2:
+
+"Consequentemente, é possível construir uma plataforma de **middleware** que gerencie a interação com fontes de contexto e ofereça informações contextuais para aplicativos sensíveis ao contexto como um serviço."
+
+"esses sistemas sofrem de uma série de restrições comuns que os tornam ineficientes para serem usados ​​em sistemas com reconhecimento de contexto do mundo real. Essas restrições incluíam **falta de tolerância a falhas** e **escalabilidade**, **suporte de interoperabilidade ruim** e **raciocínio ingênuo**"
+
+" [...] falharam em evoluir para um nível padrão da indústria."
+
+"Acreditamos que a principal deficiência desses sistemas de middleware é a falta de uma linguagem de consulta de contexto (CQL) abrangente e flexível que permita que aplicativos com reconhecimento de contexto reutilizem dados contextuais existentes com base em seus requisitos específicos [7]. "
+
+Os autores dão foco na falta do uso de CQLs, visto que são pouco conhecidas e são muito importantes.
 
 
