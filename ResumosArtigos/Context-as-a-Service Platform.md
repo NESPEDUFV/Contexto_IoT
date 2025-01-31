@@ -42,3 +42,23 @@ Leitura Parte 2:
 Os autores dão foco na falta do uso de CQLs, visto que são pouco conhecidas e são muito importantes.
 
 
+FIWARE [14]
+CA4IoT [15] 
+CAMPUS [16]
+CASF [17]
+
+[10] A. Dey, G. Abowd, and D. Salber, “A Conceptual Framework and a Toolkit for Supporting the Rapid Prototyping of Context-Aware Applications,” Human-Computer Interact., vol. 16, no. 2, pp. 97–166, 2001.
+
+[11] T. Gu, H. K. Pung, and D. Q. Zhang, “A service-oriented middleware for building context-aware services,” J. Netw. Comput.  Appl., vol. 28, no. 1, pp. 1–18, 2005.
+
+[12] H. L. Chen, “COBRA : An Intelligent Broker Architecture for Pervasive Context-Aware Systems,” Interfaces (Providence)., vol. 54, no. November, p. 129, 2004.
+
+
+
+[14] “FIWARE.”  [Online].Available https://www.fiware.org/. [Accessed: 05-Dec-2017].
+
+[15] C. Perera, A. Zaslavsky, P. Christen, and D. Georgakopoulos, “CA4IOT: Context awareness for Internet of Things,” in Proceedings - 2012 IEEE Int. Conf. on Green Computing and Communications, GreenCom 2012, Conf. on Internet of Things, iThings 2012 and Conf.  on Cyber, Physical and Social Computing, CPSCom 2012, 2012, pp.775–782.
+
+[16] E. J. Y. Wei and A. T. S. Chan, “CAMPUS: A middleware for automated context-aware adaptation decision making at run time,” Pervasive Mob. Comput., vol. 9, no. 1, pp. 35–56, 2013.
+
+[17] J. Kang and S. Park, “Context-aware services framework based on semantic web services for automatic discovery and integration of context,” Int. J. Adv. Comput. Technol., vol. 5, no. 4, 2013.
