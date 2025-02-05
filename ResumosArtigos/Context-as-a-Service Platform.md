@@ -60,12 +60,19 @@ adotamos e estendemos a ontologia OWL-S [19] adicionando a descrição de contex
 
 CoaaS framework is composed of four main components:
 1. Security and Communication Manager
-2. Context Query Engine (CQE)
+   1. podemos nn ter segurança a priori
+2. Context Query Engine (CQE) *\**
+   1. Query Parser pode ser simplificado 
 3. Context Storage Management System (CSMS), and 
+   1. ontologia
 4. Context Reasoning Engine (CRE).
+   1. não precisamos a priori (inferencia de contexto)
 
 ### Security and Communication Manager
-O Communication Manager é responsável pelo tratamento inicial de todas as mensagens recebidas e enviadas, ou seja, consultas de contexto, atualizações de contexto e respostas de contexto. Este módulo atua como um proxy e distribui todas as mensagens recebidas de CPs e CCs para os componentes correspondentes. Para garantir a privacidade e a segurança do CoaaS, este componente é vinculado ao módulo de segurança. O módulo de segurança verifica primeiramente a validade das mensagens recebidas e autentica as solicitações. Além disso, o Security Manager verifica se o consumidor de contexto tem acesso ao serviço de contexto solicitado ou não (autorização). Por fim, ele também é responsável por monitorar todas as mensagens recebidas para identificar quaisquer padrões suspeitos, como ataques de negação de serviço distribuído (DDoS).
+
+**O Communication Manager é responsável pelo tratamento inicial de todas as mensagens recebidas e enviadas, ou seja, consultas de contexto, atualizações de contexto e respostas de contexto. Este módulo atua como um proxy e distribui todas as mensagens recebidas de CPs e CCs para os componentes correspondentes.** 
+
+Para garantir a privacidade e a segurança do CoaaS, este componente é vinculado ao módulo de segurança. O módulo de segurança verifica primeiramente a validade das mensagens recebidas e autentica as solicitações. Além disso, o Security Manager verifica se o consumidor de contexto tem acesso ao serviço de contexto solicitado ou não (autorização). Por fim, ele também é responsável por monitorar todas as mensagens recebidas para identificar quaisquer padrões suspeitos, como ataques de negação de serviço distribuído (DDoS).
 
 ### Context Query Engine (CQE)  
 Este módulo é principalmente responsável por analisar as consultas recebidas, gerar e orquestrar o plano de execução da consulta e produzir o resultado final da consulta. Além disso, este componente também cuida de buscar os dados necessários dos provedores de contexto sob demanda. 
@@ -76,8 +83,8 @@ O **Query Parser** tem três responsabilidades principais:
 - a saber, e analisar as consultas recebidas, 
 - dividi-las em várias solicitações de contexto e 
 - determinar o plano de execução da consulta. 
-
 Então, a consulta analisada mais o plano de execução serão passados ​​para o **Query Coordinator**. 
+
 O **Query Coordinator** desempenha um papel de orquestrador no CQE. Este módulo é responsável por gerenciar e monitorar todo o procedimento de execução de uma consulta de contexto.
 
 Na próxima etapa, as solicitações de contexto serão enviadas para o **Context Service Discovery and Selector** (CSDS). 
@@ -191,3 +198,4 @@ Coisas para tirar do Backlog final ou deixar como coisas secundárias para se im
 
 - Camada de segurança na parte de comunicação
 - CRE que serve para inferir situações (contexto de alto nível que é inferido de vários contextos de baixo nível) a partir de dados sensoriais brutos ou contexto primitivo de baixo nível existente
+- query parser pode ser simplificado
