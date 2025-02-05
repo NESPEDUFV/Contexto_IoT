@@ -143,6 +143,11 @@ telas como **televisão inteligente**, se estavam ligados, desligam.
 64. Capacidade Freezer [100 L]
 65. Temperatura interna Forno
 
+car height,  car fuel type
+(need for charging point in case of electric vehicles), driver’s
+profile, preferred walking distance, required parking facility
+features
+
 TODO: pegar os contextos dos objetos
 
 ## Objetos
