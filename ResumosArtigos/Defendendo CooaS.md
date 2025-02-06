@@ -41,9 +41,31 @@ No entando esses sistemas sofrem de uma série de restrições comuns que os tor
 
 3. > Sistemas que abordaram e tratatam  essas limitações (middlewares)
 
+Hassani et al. diz que os sistemas a seguir "Embora tenham resolvido com sucesso algumas das limitações mencionadas, eles não conseguiram evoluir para um nível padrão da indústria."
+
+"Acreditamos que a principal deficiência desses sistemas de middleware é a falta de uma linguagem de consulta de contexto (CQL) abrangente e flexível que permita que aplicativos com reconhecimento de contexto reutilizem dados contextuais existentes com base em seus requisitos específicos [7]. "
+
+Os autores dão foco na falta do uso de CQLs, visto que são pouco conhecidas e muito importantes.
+
+Vamo ve se isso é vdd
+
 FIWARE [14]
 
 “FIWARE.” [Online]. Available: https://www.fiware.org/. [Accessed: 05-Dec-2017].
+
+"Uma estrutura com curadoria de componentes de *plataforma de código aberto* para acelerar o desenvolvimento de soluções inteligentes"
+
+Codigo aberto mas aparentemente inovações podem ser monetizadas, mas isso não quer dizer que tudo é pago, os membros que contribuem possui livre acesso
+
+possui um banco de dados imenso de várias coisas, inclusive com modelos do banco [smart-data-models](https://www.fiware.org/smart-data-models/), exemplo de um dado de qualidade da agua em JSON [exemplo](https://smart-data-models.github.io/dataModel.WaterQuality/WaterQualityObserved/examples/example.json)
+
+aparentemente ele não é um meio de distribuição de contexto geral e sim um facilitador de conexão do provedor de contexto com o consumidor de contexto sem ser algo intermediário, estando no provedor e no consumidor (foi o q entendi, não tinha mt coisa falando dele resumido)
+
+Existem vários componentes nesse fiware, principalmente de "Context broker" e data conector.
+
+talvez seria interessante conribuir nossa ontologia lá com eles se tiver como, eles tem tudo a ver com IoT e ciencia do contexto
+
+ponto negativo: não mostrou uma arquitetura replicável e nem como usar de forma simples, seria necessário ir em tutoriais da ferramenta e fazer uma busca secundária para tal
 
 CA4IoT [15]
 
@@ -56,3 +78,5 @@ E. J. Y. Wei and A. T. S. Chan, “CAMPUS: A middleware for automated context-aw
 CASF [17]
 
 J. Kang and S. Park, “Context-aware services framework based on semantic web services for automatic discovery and integration of context,” Int. J. Adv. Comput. Technol., vol. 5, no. 4, 2013.
+
+Não consegui ter acesso
