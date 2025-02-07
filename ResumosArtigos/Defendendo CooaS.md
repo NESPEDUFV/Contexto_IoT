@@ -50,7 +50,7 @@ Hassani et al. dividiram os trabalhos dos mais antigos aos mais recentes cada um
 
     > FIWARE [14]
 
-    “FIWARE.” [Online]. Available: https://www.fiware.org/. [Accessed: 05-Dec-2017].
+    “FIWARE.” [Online]. Available: <https://www.fiware.org/>. [Accessed: 05-Dec-2017].
 
     "Uma estrutura com curadoria de componentes de *plataforma de código aberto* para acelerar o desenvolvimento de soluções inteligentes"
 
