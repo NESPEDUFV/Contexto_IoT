@@ -14,7 +14,7 @@ Logically, CAMPUS is divided into a programming layer, a knowledge layer, and a 
 
 ### Camada de programação
 
-A camada de programação do CAMPUS é responsável por construir e reconfigurar aplicativos sensíveis ao contexto de acordo com as instruções da camada de decisão. Isso é alcançado pelo modelo de programação ATM (abreviação de Adaptable Task Model) que é baseado na adaptação composicional e na abordagem de separação de preocupações.
+A camada de programação do CAMPUS é responsável por construir e reconfigurar aplicaçoes sensíveis ao contexto de acordo com as instruções da camada de decisão. Isso é alcançado pelo modelo de programação ATM (abreviação de Adaptable Task Model) que é baseado na adaptação composicional e na abordagem de separação de preocupações.
 
 Em geral, as abordagens para realizar a adaptação sensível ao contexto podem ser classificadas em adaptação transformacional e adaptação composicional [18,19].
 
@@ -38,7 +38,7 @@ Na ciência da computação, ontologia é uma descrição dos conceitos e relaci
 2. ontologias simplificarão muito as tarefas de raciocínio automatizado baseado em semântica e tomada de decisão. Ontologias incluem definições interpretáveis ​​por máquina de conceitos no domínio e os relacionamentos entre eles. Elas são expressas em uma linguagem formal baseada em lógica, para que distinções consistentes e significativas possam ser feitas entre as classes, propriedades e relações. É importante ressaltar que um número considerável de mecanismos de raciocínio existentes pode ser empregado para executar raciocínio automatizado e tomada de decisão nas ontologias CAMPUS.
 3. Finalmente, muitos editores gráficos de ontologia, como o Protégé OWL,2 estão disponíveis para facilitar o desenvolvimento de ontologias. Ontologias de contexto de larga escala também podem ser compostas sem a necessidade de começar do zero, reutilizando as ontologias bem definidas de diferentes domínios.
 
-
+descrições de ontologias usadas:
 
 1. Ontologias de contexto modelam várias entidades de contexto para compartilhar informações contextuais em um ambiente dinâmico.
 2. Ontologias de tasklet descrevem as propriedades de tasklets individuais e seus requisitos para condições contextuais.
