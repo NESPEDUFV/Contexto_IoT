@@ -12,77 +12,78 @@
 
 ## História
 
-Angelo é um homem comum de uma realidade futurista, que toda manhã, depois de 
-uma noite bem dormida na sua **cama inteligente**, acorda com seu 
-**relógio inteligente** as 5:50 da manhã. Ele vai para o banheiro, lava o 
-rosto na pia e escova os dentes lendo algumas manchetes no 
-**espelho inteligente**. Após ter terminado, ele checa a saúde de seus dentes 
-na análise que a **escova inteligente** fez, e toma um banho no seu 
-**chuveiro inteligente**. Enquanto isso, sua **cafeteira inteligente** já 
-prepara seu café para comer com um pão fresquinho que sua máquina de fazer 
+Angelo é um homem comum de uma realidade futurista, que toda manhã, depois de
+uma noite bem dormida na sua **cama inteligente**, acorda com seu
+**relógio inteligente** as 5:50 da manhã. Ele vai para o banheiro, lava o
+rosto na pia e escova os dentes lendo algumas manchetes no
+**espelho inteligente**. Após ter terminado, ele checa a saúde de seus dentes
+na análise que a **escova inteligente** fez, e toma um banho no seu
+**chuveiro inteligente**. Enquanto isso, sua **cafeteira inteligente** já
+prepara seu café para comer com um pão fresquinho que sua máquina de fazer
 pão começou a fazer na noite passada.
 
 Quando chega na cozinha, as **cortinas inteligentes** e **janelas inteligentes** se abrem para aproveitar a luz do dia. Nesse momento, o termostato analisa o ambiente e ajusta a temperatura para ficar mais confortável, ligando o **ar-condicionado inteligente**
 
-Mas hoje ele está com vontade de comer ovos mexidos também. Então, ele vai no 
+Mas hoje ele está com vontade de comer ovos mexidos também. Então, ele vai no
 seu **armário inteligente** e pega os ingredientes. Nesse momento, o armário
 identifica que alguns itens estão acabando e oferece a opção de pedir
 automaticamente os itens, mas Angelo recusa pois estava precisando ir no
-centro da cidade de qualquer forma e não estava a fim de pagar frete. Angelo 
+centro da cidade de qualquer forma e não estava a fim de pagar frete. Angelo
 vai até sua **geladeira inteligente** e pega os ovos, a **embalagem inteligente** mostra que estão bons para o consumo.
 
-Com os ingredientes em mãos, Angelo pede para sua **alexa** ligar seu 
-**fogão inteligente** para aquecer sua **panela inteligente** na temperatura 
-perfeita. Ele faz os ovos mexidos e já coloca os itens na sua 
+Com os ingredientes em mãos, Angelo pede para sua **alexa** ligar seu
+**fogão inteligente** para aquecer sua **panela inteligente** na temperatura
+perfeita. Ele faz os ovos mexidos e já coloca os itens na sua
 **lava-louças inteligente**. Enquanto come, pede para a **alexa** ativar o
 **robô aspirador de pó inteligente** e pergunta onde está jake, seu gatinho.
 Com dispositivos conectados, a **coleira inteligente** e o **piso inteligente** cruzam informações e revelam que ele está na lavanderia. Angelo, muito astuto, pede para a alexa ativar o **comedouro inteligente**, que logo libera a comida (Angelo não deixou isso automático pois gosta de comer com jake), logo a localização de jake muda rapidamente e ele chega em questão de segundos ao ouvir o som da ração caindo no potinho.
 
 Depois de ter comido, ele vai no seu **guarda-roupa inteligente** e pede ajuda
 para decidir o que vestir hoje de acordo com o clima. Logo o guarda-roupa
-mostra uma bermuda e uma **camisa inteligente** (hoje está fazendo muito calor), ele veste seu **anél inteligente** e **colar inteligente**, pega seu 
-**not-ablet** (notbook+tablet) e se dirige para a garagem para ir ao trabalho 
-com seu **carro inteligente**. Antes de entrar no carro, ele repara que o 
+mostra uma bermuda e uma **camisa inteligente** (hoje está fazendo muito calor), ele veste seu **anél inteligente** e **colar inteligente**, pega seu
+**not-ablet** (notbook+tablet) e se dirige para a garagem para ir ao trabalho
+com seu **carro inteligente**. Antes de entrar no carro, ele repara que o
 sistema de irrigação de seu quintal está estranho e logo pergunta para a alexa
-o que aconteceu. Ela responde que, em um ponto da **mangueira inteligente** 
+o que aconteceu. Ela responde que, em um ponto da **mangueira inteligente**
 a pressão da água está menor que o padrão, logo o **gotejador inteligente**
 desligou o fluxo de água para evitar desperdício. "Marque isso na minha lista
 de tarefas por favor", disse Angelo.
 
-No momento que o carro sai de casa, as **portas inteligentes** e 
+No momento que o carro sai de casa, as **portas inteligentes** e
 **janelas inteligentes** se fecham e trancam, **lampadas inteligentes** apagam
 telas como **televisão inteligente**, se estavam ligados, desligam.
 
-
 ## Aplicações
-1.  Detecção de quedas
-2.  Controle de microprocessadores através de voz, aplicação mobile ou 
-    aplicação web 
-3.  Cuidados com animais de estimação (batimentos cardiacos, alimentação
+
+1. Detecção de quedas
+2. Controle de microprocessadores através de voz, aplicação mobile ou
+    aplicação web
+3. Cuidados com animais de estimação (batimentos cardiacos, alimentação
     na hora correta, mensagens de emergêcia, camera)
-4.  Gerenciamento de gasto de energia (monitoramento e redução de consumo)
-5.  Gerenciamento de gasto de agua (monitoramento e redução de consumo)
-6.  Sistema de segurança e privacidade inteligente (alarmes, autolock)
-7.  Sistema de localização interno (Fingerprint based)
-8.  Sistema detector de gases perigosos
-9.  Sistemas de cuidado com a saúde (batimentos cardiacos)
-10. Sistemas de controle de luz 
+4. Gerenciamento de gasto de energia (monitoramento e redução de consumo)
+5. Gerenciamento de gasto de agua (monitoramento e redução de consumo)
+6. Sistema de segurança e privacidade inteligente (alarmes, autolock)
+7. Sistema de localização interno (Fingerprint based)
+8. Sistema detector de gases perigosos
+9. Sistemas de cuidado com a saúde (batimentos cardiacos)
+10. Sistemas de controle de luz
 11. Controladores de temperatura e umidade
 12. Aplicações com RFID (abrir portão, liberar ração)
-13. Serviço de limpeza inteligente (robo aspirador, 
+13. Serviço de limpeza inteligente (robo aspirador,
     fechar janelas se muito vento)
 14. Jardim inteligente (regar as plantas quando necessário)
 15. Locomoção inteligente (carro inteligente andando)
 16. Cocção inteligente (fogão inteligente)
-17. Gerenciamento de inventário 
+17. Gerenciamento de inventário
 
 ## Contextos
+
 1. Tamanho de tela [1080x720]
 2. Pixels de camera [13MP]
 3. aberto/fechado
 4. Conectividade wifi [802.11b/g/n (2,4 GHz e 5 GHz)]
-5. Hardware de Som 
-6. Processador 
+5. Hardware de Som
+6. Processador
 7. Conectividade Bluetooth
 8. Peso do objeto [45kg]
 9. Disponibilidade de idioma [pt-br, en-us]
@@ -103,7 +104,7 @@ telas como **televisão inteligente**, se estavam ligados, desligam.
 24. Velocidade de ventilação [5/4]
 25. Capacidade de Resfriamento(min/max) [1.61 ~ 6.45 kW]
 26. Capacidade de Aquicimento(min/max) [1.17 ~ 6.30 kW]
-27. Nível de ruído [43dBA] 
+27. Nível de ruído [43dBA]
 28. Classificação energética [A]
 29. Consumo energético (potência) [1630W]
 30. Corrente de operação (Resfriamento) [7.7A]
@@ -151,97 +152,98 @@ features
 TODO: pegar os contextos dos objetos
 
 ## Objetos
-1.  Alexa (caixa de som)
-    Aplicações [2, 5, 12, 13, 15, 16, 17, 19, 20, 21] 
-    Contextos 
-2.  Armário inteligente 
-    Aplicações [20] 
-    Contextos 
-3.  Ar-condicionado Inteligente 
-    Aplicações [3, 4, 6, 13] 
-    Contextos 
-4.  Anel inteligente 
-    Aplicações [1, 5, 9, 11, 14] 
-    Contextos 
-5.  Cafeteira inteligente 
-    Aplicações [19] 
-    Contextos 
-6.  Cama inteligente
+
+1. Alexa (caixa de som)
+    Aplicações [2, 5, 12, 13, 15, 16, 17, 19, 20, 21]
+    Contextos
+2. Armário inteligente
+    Aplicações [20]
+    Contextos
+3. Ar-condicionado Inteligente
+    Aplicações [3, 4, 6, 13]
+    Contextos
+4. Anel inteligente
+    Aplicações [1, 5, 9, 11, 14]
+    Contextos
+5. Cafeteira inteligente
+    Aplicações [19]
+    Contextos
+6. Cama inteligente
     Aplicações [11]
-    Contextos 
-7.  Camisa inteligente 
-    Aplicações [11] 
-    Contextos 
-8.  Camera inteligente
+    Contextos
+7. Camisa inteligente
+    Aplicações [11]
+    Contextos
+8. Camera inteligente
     Aplicações [1, 3, 5, 8, 9, 20]
-    Contextos 
-9.  Chuveiro inteligente 
+    Contextos
+9. Chuveiro inteligente
     Aplicações [7]
-    Contextos 
-10. Computador inteligente 
+    Contextos
+10. Computador inteligente
     Aplicações [6, 15]
-    Contextos 
-11. Carro inteligente 
+    Contextos
+11. Carro inteligente
     Aplicações [18]
-    Contextos 
-12. Colar inteligente 
-    Aplicações [1, 9, 11, 14] 
-    Contextos 
+    Contextos
+12. Colar inteligente
+    Aplicações [1, 9, 11, 14]
+    Contextos
 13. Coleira inteligente
     Aplicações [3, 9, 14]
-    Contextos 
+    Contextos
 14. Comedouro inteligente
     Aplicações [3]
-    Contextos 
+    Contextos
 15. Cortinas inteligentes
     Aplicações [12]
-    Contextos 
-16. Embalagem inteligente 
+    Contextos
+16. Embalagem inteligente
     Aplicações [11, 19]
-    Contextos 
-17. Escova inteligente 
+    Contextos
+17. Escova inteligente
     Aplicações [11]
-    Contextos 
+    Contextos
 18. Espelho inteligente
     Aplicações [15]
-    Contextos 
+    Contextos
 19. Fogão inteligente
     Aplicações [19, 6]
-    Contextos 
+    Contextos
 20. Geladeira inteligente
     Aplicações [20, 6]
-    Contextos 
+    Contextos
 21. Gotejador inteligente
     Aplicações [7, 17]
-    Contextos 
-22. Guarda-roupa inteligente 
-    Aplicações [15] 
-    Contextos 
-23. Janelas inteligentes 
+    Contextos
+22. Guarda-roupa inteligente
+    Aplicações [15]
+    Contextos
+23. Janelas inteligentes
     Aplicações [12]
-    Contextos 
-24. Lampadas inteligentes 
+    Contextos
+24. Lampadas inteligentes
     Aplicações [6, 12]
-    Contextos 
+    Contextos
 25. Lava-louças inteligente
     Aplicações [16]
-    Contextos 
-26. Panela inteligente 
+    Contextos
+26. Panela inteligente
     Aplicações [19]
-    Contextos 
-27. Piso inteligente 
+    Contextos
+27. Piso inteligente
     Aplicações [1, 9]
-    Contextos 
-28. Portas inteligentes 
+    Contextos
+28. Portas inteligentes
     Aplicações [8, 14]
-    Contextos 
-29. Relógio inteligente 
+    Contextos
+29. Relógio inteligente
     Aplicações [1, 11, 15]
-    Contextos 
-30. Robô aspirador de pó inteligente 
+    Contextos
+30. Robô aspirador de pó inteligente
     Aplicações [9, 16]
     Contextos []
-31. Sensor de umidade do solo 
+31. Sensor de umidade do solo
     Aplicações [17]
     Contextos []
 32. Medidores de PH da agua
@@ -274,14 +276,13 @@ TODO: pegar os contextos dos objetos
 41. Sensor de precipitação
     Aplicações [7, 17]
     Contextos []
-42. Televisão inteligente 
+42. Televisão inteligente
     Aplicações [15]
     Contextos []
 
 ## Desenho da casa
 
 ![Casa inteligente](casaInteligente.png)
-
 
 Legenda de cores: (posição [x;y])
 

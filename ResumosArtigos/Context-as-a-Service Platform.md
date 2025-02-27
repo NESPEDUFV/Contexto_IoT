@@ -95,6 +95,10 @@ Na próxima etapa, as solicitações de contexto serão enviadas para o **Contex
 CSDS é responsável por encontrar o serviço de contexto mais apropriado para uma solicitação recebida. Este componente consiste em duas partes:
 
 - O **Context Service Discovery**, que é implementado como parte do CSMS, encontra serviços de contexto que correspondem aos requisitos de uma solicitação de contexto. Ele passará as descrições dos serviços candidatos para o **Service Selector**.
+O fluxo de trabalho deste componente consiste em duas partes. Primeiro, ele encontra serviços de contexto que correspondem aos requisitos de uma solicitação de contexto. Então, com base nos serviços descobertos, ele retorna um conjunto classificado dos melhores serviços de contexto disponíveis que podem satisfazer os requisitos de uma solicitação, considerando diferentes métricas, como Custo do Serviço e Qualidade do Serviço.
+
+Execution plan generator: monta um grafo de dependencias, se der ciclo não é possível fazer a consulta
+esse grafo é para paralelizar consultas de contexto que são dependentes de dispositivos diferentes
 
 - Em seguida, o **Service Selector** retorna um conjunto classificado dos melhores serviços de contexto disponíveis que podem satisfazer os requisitos de uma solicitação considerando diferentes métricas, como Custo do Serviço e Qualidade do Serviço.
 

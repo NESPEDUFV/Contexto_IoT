@@ -1,0 +1,63 @@
+BASE         <http://nesped.caf.ufv.br/nomedataset/appAreas>
+PREFIX :     <#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+
+:AreaApplication a owl:Class .
+
+:SmartAplication a owl:Class;
+    rdfs:domain :AreaApplication.
+
+:SmartHome a :AreaApplication.
+
+:SmartHealth a :AreaApplication.
+
+:SmartFarm a :AreaApplication.
+
+:SmartCity a :AreaApplication;
+    :composedOf :SmartHome, :SmartIndustry, :SmartCampus.
+
+:SmartIndustry a :AreaApplication.
+
+:SmartCampus a :AreaApplication.
+
+
+:FallDetection a :SmartAplication.
+
+:VoiceControl a :SmartAplication ;
+    rdfs:comment "Control of microprocessors via voice, mobile application or web application." .
+    
+
+:PetCare a :SmartAplication.
+
+:EnergyManagement a :SmartAplication;
+    rdfs:comment "monitoring and consumption reduction." .
+
+:WaterManagement a :SmartAplication;
+    rdfs:comment "monitoring and consumption reduction." .
+
+:SmartSecurity a :SmartAplication .
+
+:IndoorLocation a :SmartAplication .
+
+:SmartGasDetection a :SmartAplication .
+
+:SmartHealthCare a :SmartAplication . 
+
+:SmartLighting a :SmartAplication .
+
+:SmartTemperatureHumidity a :SmartAplication .
+
+:RFIDApp a :SmartAplication . 
+
+:SmartCleaning a :SmartAplication .
+
+:SmartGarden a :SmartAplication.
+
+:SmartLocomotion a :SmartAplication .
+
+:SmartCooking a :SmartAplication .
+
+:InventoryManagement a :SmartAplication .
