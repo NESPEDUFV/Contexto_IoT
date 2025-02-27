@@ -48,7 +48,9 @@ PREFIX owl:  <http://www.w3.org/2002/07/owl#>
 
 :SmartLighting a :SmartAplication .
 
-:SmartTemperatureHumidity a :SmartAplication .
+:SmartTemperature a :SmartAplication .
+
+:SmartHumidity a :SmartAplication .
 
 :RFIDApp a :SmartAplication . 
 
