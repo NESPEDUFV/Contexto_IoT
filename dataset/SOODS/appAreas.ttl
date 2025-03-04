@@ -5,61 +5,116 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
 PREFIX owl:  <http://www.w3.org/2002/07/owl#>
 
-:AreaApplication a owl:Class .
+:ApplicationDomain a owl:Class .
 
-:SmartAplication a owl:Class;
-    rdfs:domain :AreaApplication.
-
-:SmartHome a :AreaApplication.
-
-:SmartHealth a :AreaApplication.
-
-:SmartFarm a :AreaApplication.
-
-:SmartCity a :AreaApplication;
-    :composedOf :SmartHome, :SmartIndustry, :SmartCampus.
-
-:SmartIndustry a :AreaApplication.
-
-:SmartCampus a :AreaApplication.
+:Application a owl:Class;
+    rdfs:comment "A smart application that uses IoT resources." ;
+    rdfs:domain :ApplicationDomain.
 
 
-:FallDetection a :SmartAplication.
 
-:VoiceControl a :SmartAplication ;
+:SmartHome a :ApplicationDomain.
+
+:SmartHealth a :ApplicationDomain.
+
+:SmartFarm a :ApplicationDomain.
+
+:SmartCity a :ApplicationDomain.
+
+:SmartIndustry a :ApplicationDomain.
+
+:SmartCampus a :ApplicationDomain.
+
+
+:FallDetection a :Application.
+
+:VoiceControl a :Application ;
     rdfs:comment "Control of microprocessors via voice, mobile application or web application." .
     
+:PetCare a :Application.
 
-:PetCare a :SmartAplication.
+:EnergyManagement a :Application;
+    rdfs:comment "Monitoring and consumption reduction." .
 
-:EnergyManagement a :SmartAplication;
-    rdfs:comment "monitoring and consumption reduction." .
+:WaterManagement a :Application;
+    rdfs:comment "Monitoring and consumption reduction." .
 
-:WaterManagement a :SmartAplication;
-    rdfs:comment "monitoring and consumption reduction." .
+:SmartSecurity a :Application .
 
-:SmartSecurity a :SmartAplication .
+:IndoorLocation a :Application .
 
-:IndoorLocation a :SmartAplication .
+:SmartGasDetection a :Application .
 
-:SmartGasDetection a :SmartAplication .
+:SmartHealthCare a :Application . 
 
-:SmartHealthCare a :SmartAplication . 
+:SmartLighting a :Application .
 
-:SmartLighting a :SmartAplication .
+:SmartTemperature a :Application .
 
-:SmartTemperature a :SmartAplication .
+:SmartHumidity a :Application .
 
-:SmartHumidity a :SmartAplication .
+:RFID a :Application . 
 
-:RFIDApp a :SmartAplication . 
+:SmartCleaning a :Application .
 
-:SmartCleaning a :SmartAplication .
+:SmartGarden a :Application.
 
-:SmartGarden a :SmartAplication.
+:SmartLocomotion a :Application .
 
-:SmartLocomotion a :SmartAplication .
+:SmartCooking a :Application .
 
-:SmartCooking a :SmartAplication .
+:InventoryManagement a :Application .
 
-:InventoryManagement a :SmartAplication .
+:SmartParking a :Application .
+
+:SmartClassroom a :Application .
+
+:SmartBedroom a :Application . # smart room?
+
+:CampusTalk a :Application .
+
+:DormTalk a :Application .
+
+:SmartBus a :Application . #Smart transport? logistica? 
+
+:SmartUniCal a :Application .
+
+:CampusTalk a :Application .
+
+:SupplyChainManagement a :Application .
+
+:SmartMining a :Application .
+
+:DisasterManagement a :Application .
+
+:EnvironmentalMonitoringControl a :Application .
+
+:SmartIrrigation a :Application .
+
+:PlantMonitoring a :Application .
+
+:AnimalMonitoring a :Application .
+
+:SmartGreenhouse a :Application .
+
+:FoodRating a :Application .
+
+:FertilizerPesticideControl a :Application .
+
+:MonitoringVitalSigns a :Application .
+
+:MedicationAdherence a :Application .
+
+:AssistiveTechnology a :Application .
+
+:AgedCareMonitoring a :Application .
+
+:PreventiveMeasures a :Application .
+
+:MentalCare a :Application .
+
+:EmergencyAlarmSystem a :Application .
+
+# :DecisionSupport a :Application . é mais sobre IA do que IoT
+
+# :SmartMobility a :Application .
