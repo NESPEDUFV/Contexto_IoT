@@ -4,3 +4,334 @@ PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
 PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX app: <http://nesped.caf.ufv.br/nomedataset/appAreas>
+
+:SmartObject a owl:Class .
+
+
+
+:SmartFeeder a :SmartObject ;
+    app:usedFor app:PetCare , app:VoiceControl.
+
+:SmartCabinets a :SmartObject ;
+    app:usedFor app:InventoryManagement .
+
+:SmartPackaging a :SmartObject ;
+    app:usedFor app:SmartPackaging .
+
+:SmartCookware a :SmartObject ;
+    app:usedFor app:SmartCooking .
+
+:SmartRefrigerator a :SmartObject ;
+    app:usedFor app:EnergyManagement , app:SmartHumidity , app:InventoryManagement.
+
+:SmartFreezer a :SmartObject ;
+    app:usedFor app:EnergyManagement , app:SmartHumidity , app:InventoryManagement.
+
+:SmartSilo a :SmartObject ;
+    app:usedFor app:InventoryManagement .
+
+:SmartAirConditioner a :SmartObject ;
+    app:usedFor app:EnergyManagement , app:SmartBedRoom , app:SmartTemperature , app:VoiceControl.
+
+:SmartHeater a :SmartObject ;
+    app:usedFor app:EnergyManagement , app:SmartTemperature .
+
+:SmartFan a :SmartObject ;
+    app:usedFor app:SmartTemperature , app:SmartBedRoom , app:VoiceControl.
+
+:SmartThermostat a :SmartObject ;
+    app:usedFor app:EnergyManagement , app:SmartTemperature , app:VoiceControl.
+
+:SmartStove a :SmartObject ;
+    app:usedFor app:SmartCooking .
+
+:SmartAirFryer a :SmartObject ;
+    app:usedFor app:SmartCooking .
+
+:SmartOven a :SmartObject ;
+    app:usedFor app:SmartCooking .
+
+:SmartWindow a :SmartObject ;
+    app:usedFor app:SmartLighting .
+
+:SmartCurtain a :SmartObject ;
+    app:usedFor app:SmartLighting .
+
+:SmartPlug a :SmartObject ;
+    app:usedFor app:EnergyManagement , app:VoiceControl .
+
+:SmartSprinkler a :SmartObject ;
+    app:usedFor app:SmartGarden , app:VoiceControl .
+
+:SmartDripper a :SmartObject ;
+    app:usedFor app:SmartGarden , app:VoiceControl .
+
+:SmartShower a :SmartObject ;
+    app:usedFor app:WaterManagement .
+
+:SmartWaterDispenser a :SmartObject ;
+    app:usedFor app:WaterManagement .
+
+:SmartWaterFilters a :SmartObject ;
+    app:usedFor app:WaterManagement .
+
+:SmartShirt a :SmartObject ;
+    app:usedFor app:MonitoringVitalSigns .
+
+:SmartSneakers a :SmartObject .
+
+
+:SmartRaincoat a :SmartObject .
+
+:MultiTreatmentStation a :SmartObject .
+
+:SmartWatch a :SmartObject .
+
+:VRGlasses a :SmartObject .
+
+:SmartHelmet a :SmartObject .
+
+:SmartRing a :SmartObject .
+
+:SmartNecklace a :SmartObject .
+
+:SmartBracelet a :SmartObject .
+
+:SmartBelt a :SmartObject .
+
+:SmartEarring a :SmartObject .
+
+:SmartMask a :SmartObject .
+
+:SmartContinuousGlucoseMonitor a :SmartObject .
+
+:SmartAnkleBand a :SmartObject .
+
+:SmartCap a :SmartObject .
+
+:SmartCollar a :SmartObject .
+
+:SmartPetTag a :SmartObject .
+
+:SmartBoots a :SmartObject .
+
+:SmartHeadphones a :SmartObject .
+
+:SmartVests a :SmartObject .
+
+:SmartProsthetics a :SmartObject .
+
+:SmartOrthosis a :SmartObject .
+
+:SmartExoskeleton a :SmartObject .
+
+:SmartRehabilitationGlove a :SmartObject .
+
+:SmartHearingAids a :SmartObject .
+
+:SmartHapticSuit a :SmartObject .
+
+:SmartChair a :SmartObject .
+
+:SmartOdorDetectionandEmissionDevice a :SmartObject .
+
+:SmartGustatoryEffectDevice a :SmartObject .
+
+:ElectricalConductivityMeter a :SmartObject .
+
+:WaterPHMeters a :SmartObject .
+
+:OxidationReductionPotentialSensor a :SmartObject .
+
+:WaterSalinityMeter a :SmartObject .
+
+:SpecificGravityMeter a :SmartObject .
+
+:TotalDissolvedSolidsMeter a :SmartObject .
+
+:CarbonMonoxideSensor a :SmartObject .
+
+:FineParticulateMatterSensor a :SmartObject .
+
+:OzoneSensor a :SmartObject .
+
+:ElectrochemicalSensor a :SmartObject .
+
+:ElectroacousticSensor a :SmartObject .
+
+:SulfurDioxideSensor a :SmartObject .
+
+:NitrousOxideSensor a :SmartObject .
+
+:AirHumiditySensor a :SmartObject .
+
+:SoilNitrogenSensor a :SmartObject .
+
+:SoilPhosphorusSensor a :SmartObject .
+
+:SoilPotassiumSensor a :SmartObject .
+
+:SoilCarbonDioxideSensor a :SmartObject .
+
+:SoilPHSensor a :SmartObject .
+
+:SoilMoistureSensor a :SmartObject .
+
+:SoilElectricalConductivitySensor a :SmartObject .
+
+:SoilSalinitySensor a :SmartObject .
+
+:InfraredGasSensor a :SmartObject .
+
+:ElectrochemicalGasSensor a :SmartObject .
+
+:SemiconductorGasSensor a :SmartObject .
+
+:CatalyticGasSensor a :SmartObject .
+
+:GasLeakSensor a :SmartObject .
+
+:SmokeSensors a :SmartObject .
+
+:BiometricSensor a :SmartObject .
+
+:IntracorporealTemperatureSensor a :SmartObject .
+
+:GPSSensor a :SmartObject .
+
+:AmbientTemperatureSensor a :SmartObject .
+
+:LightSensor a :SmartObject .
+
+:InfraredSensor a :SmartObject .
+
+:ContactSensor a :SmartObject .
+
+:ProximitySensor a :SmartObject .
+
+:SoundPressureLevelSensor a :SmartObject .
+
+:PrecipitationSensor a :SmartObject .
+
+:FlameSensor a :SmartObject .
+
+:PiezoelectricSensor a :SmartObject .
+
+:PiezoresistivePressureSensor a :SmartObject .
+
+:CurrentSensor a :SmartObject .
+
+:VoltageSensor a :SmartObject .
+
+:SolarRadiationSensor a :SmartObject .
+
+:FloodSensors a :SmartObject .
+
+:MotionSensor a :SmartObject .
+
+:MechanicalPartsIntegritySensors a :SmartObject .
+
+:WaterFlowSensor a :SmartObject .
+
+:SmartAccelerometer a :SmartObject .
+
+:SmartMicrophones a :SmartObject .
+
+:VibrationSensor a :SmartObject .
+
+:SmartSonar a :SmartObject .
+
+:SmartFloor a :SmartObject .
+
+:SmartParkingSpaces a :SmartObject .
+
+:SmartSpeedBumps a :SmartObject .
+
+:SmartTrafficLights a :SmartObject .
+
+:SmartTrafficLights a :SmartObject .
+
+:SmartElectricFence a :SmartObject .
+
+:SmartFencesNon-Electric a :SmartObject .
+
+:PerimeterSensor a :SmartObject .
+
+:ComputerPCDesktopServers a :SmartObject .
+
+:SmartTVs a :SmartObject .
+
+:SetTopBoxes a :SmartObject .
+
+:MediaPlayers a :SmartObject .
+
+:SmartBoards a :SmartObject .
+
+:SmartTelemetry a :SmartObject .
+
+:SelfServiceKiosk a :SmartObject .
+
+:SmartProjectors a :SmartObject .
+
+:SmartWhiteboards a :SmartObject .
+
+:InformationKiosks a :SmartObject .
+
+:SmartCars a :SmartObject .
+
+:SmartThreeWheelScooter a :SmartObject .
+
+:SmartMotorcycle a :SmartObject .
+
+:SmartHarvestingRobot a :SmartObject .
+
+:RoboticArm a :SmartObject .
+
+:SmartWeedingRobot a :SmartObject .
+
+:SmartSwitches a :SmartObject .
+
+:SmartEnergyMeterCircuitBreaker a :SmartObject .
+
+:SmartWalkers a :SmartObject .
+
+:SmartCommunicationBoard a :SmartObject .
+
+:SmartVocalizer a :SmartObject .
+
+:BrightSignSmartVocalizationGlove a :SmartObject .
+
+:SmartDryer a :SmartObject .
+
+:SmartWashingMachine a :SmartObject .
+
+:SmartPillBlisterPack a :SmartObject .
+
+:SmartPillOrganizer a :SmartObject .
+
+:SmartLightBulbs a :SmartObject .
+
+:SmartSatellite a :SmartObject .
+
+:RFID a :SmartObject .
+
+:Drones a :SmartObject .
+
+:Smart3DPrinter a :SmartObject .
+
+:SmartMat a :SmartObject .
+
+:SmartSpeakers a :SmartObject .
+
+:SmartMirror a :SmartObject .
+
+:SmartDoor a :SmartObject .
+
+:SmartLock a :SmartObject .
+
+:Cameras a :SmartObject .
+
+:IMedBoxSmartMedicalCase a :SmartObject .
+
+: a :SmartObject .

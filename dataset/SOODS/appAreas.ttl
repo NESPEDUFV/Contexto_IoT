@@ -7,83 +7,95 @@ PREFIX owl:  <http://www.w3.org/2002/07/owl#>
 
 :ApplicationDomain a owl:Class .
 
-:Application a owl:Class;
+:Application a owl:Class ;
     rdfs:comment "A smart application that uses IoT resources." ;
-    rdfs:domain :ApplicationDomain.
+    rdfs:domain :ApplicationDomain .
+
+:usedFor a rdf:predicate ;
+    rdfs:comment "Predicate used to define that a <subject> is used for <object>".
+
+:usedIn a rdf:predicate ;
+    rdfs:comment "Predicate used to define that a <subject> is used in <object>".
+
+:SmartHome a :ApplicationDomain .
+
+:SmartHealth a :ApplicationDomain .
+
+:SmartFarm a :ApplicationDomain .
+
+:SmartCity a :ApplicationDomain .
+
+:SmartIndustry a :ApplicationDomain .
+
+:SmartCampus a :ApplicationDomain .
 
 
-
-:SmartHome a :ApplicationDomain.
-
-:SmartHealth a :ApplicationDomain.
-
-:SmartFarm a :ApplicationDomain.
-
-:SmartCity a :ApplicationDomain.
-
-:SmartIndustry a :ApplicationDomain.
-
-:SmartCampus a :ApplicationDomain.
-
-
-:FallDetection a :Application.
+:FallDetection a :Application ;
+    :usedIn :SmartHealth, :SmartHome.
 
 :VoiceControl a :Application ;
-    rdfs:comment "Control of microprocessors via voice, mobile application or web application." .
+    rdfs:comment "Control of microprocessors via voice, mobile application or web application." ;
+    :usedIn :SmartHome, :SmartCampus, :SmartHealth .
     
-:PetCare a :Application.
+:PetCare a :Application;
+    :usedIn :SmartHealth, :SmartHome .
 
 :EnergyManagement a :Application;
-    rdfs:comment "Monitoring and consumption reduction." .
+    rdfs:comment "Monitoring and consumption reduction." ;
+    :usedIn :SmartHome, :SmartFarm, :SmartCity, :SmartIndustry, :SmartCampus .
 
 :WaterManagement a :Application;
-    rdfs:comment "Monitoring and consumption reduction." .
+    rdfs:comment "Monitoring and consumption reduction." ;
+    :usedIn :SmartHome, :SmartFarm, :SmartCity, :SmartIndustry, :SmartCampus .
 
-:SmartSecurity a :Application .
+:SmartSecurity a :Application ;
+    rdfs:comment "Camera and sensor control for privacy and security" ;
+    :usedIn :SmartHome, :SmartFarm, :SmartCity, :SmartIndustry .
 
-:IndoorLocation a :Application .
+:IndoorLocation a :Application ; # TODO: renomear 
+    rdfs:comment "Fingerprint based indoor localization system" ;
+    :usedIn :SmartHome, :SmartFarm .
+    
+:SmartGasDetection a :Application ;
+    :usedIn :SmartHome, :SmartIndustry, :SmartCampus .
 
-:SmartGasDetection a :Application .
+:SmartLighting a :Application ;
+    rdfs:comment "Brightness control and monitor" .
 
-:SmartHealthCare a :Application . 
-
-:SmartLighting a :Application .
-
-:SmartTemperature a :Application .
+:SmartTemperature a :Application ;
+    rdfs:comment "control and monitor" .
 
 :SmartHumidity a :Application .
 
-:RFID a :Application . 
-
-:SmartCleaning a :Application .
+:SmartCleaning a :Application ;
+    rdfs:comment "Applications that help with general cleaning, such as dishes, clothes and floors".
 
 :SmartGarden a :Application.
 
-:SmartLocomotion a :Application .
+:SmartCooking a :Application ;
+    rdfs:comment "Applications that make cooking easier and safer" .
 
-:SmartCooking a :Application .
-
-:InventoryManagement a :Application .
+:InventoryManagement a :Application ;
+    rdfs:comment "Preserve and manage anything" .
 
 :SmartParking a :Application .
 
 :SmartClassroom a :Application .
 
-:SmartBedroom a :Application . # smart room?
+:SmartBedroom a :Application .
 
-:CampusTalk a :Application .
+:CampusTalk a :Application ;
+    rdfs:comment "An application that centralizes multiple smart campus applications";
+    rdfs:seeAlso "Y. -B. Lin, L. -K. Chen, M. -Z. Shieh, Y. -W. Lin and T. -H. Yen, \"CampusTalk: IoT Devices and Their Interesting Features on Campus Applications,\" in IEEE Access, vol. 6, pp. 26036-26046, 2018, doi: 10.1109/ACCESS.2018.2832222. keywords: {Internet of Things;Smart phones;Sensors;Servers;Graphical user interfaces;Acceleration;Gyroscopes;Art design;campus applications;cyber and physical interaction;Internet of Things}".
 
-:DormTalk a :Application .
+:SmartMobility a :Application ;
+    rdfs:comment "It is a concept that aims to improve urban mobility by making travel more efficient, sustainable and safe, using cars, motorcycles, drones, among others." .
 
-:SmartBus a :Application . #Smart transport? logistica? 
+:SupplyChainManagement a :Application ;
+    rdfs:comment "It's about managing the supply chain of any product with sensor data" .
 
-:SmartUniCal a :Application .
-
-:CampusTalk a :Application .
-
-:SupplyChainManagement a :Application .
-
-:SmartMining a :Application .
+:SmartMining a :Application ;
+    rdfs:comment "Encompasses everything from worker safety to increasing extraction efficiency" .
 
 :DisasterManagement a :Application .
 
@@ -97,7 +109,8 @@ PREFIX owl:  <http://www.w3.org/2002/07/owl#>
 
 :SmartGreenhouse a :Application .
 
-:FoodRating a :Application .
+:FoodRating a :Application ;
+    rdfs:comment "Food quality control" .
 
 :FertilizerPesticideControl a :Application .
 
@@ -109,12 +122,8 @@ PREFIX owl:  <http://www.w3.org/2002/07/owl#>
 
 :AgedCareMonitoring a :Application .
 
-:PreventiveMeasures a :Application .
+:PreventiveHealthMeasures a :Application .
 
 :MentalCare a :Application .
 
 :EmergencyAlarmSystem a :Application .
-
-# :DecisionSupport a :Application . é mais sobre IA do que IoT
-
-# :SmartMobility a :Application .
