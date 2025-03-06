@@ -14,8 +14,7 @@ PREFIX owl:  <http://www.w3.org/2002/07/owl#>
 :usedFor a rdf:predicate ;
     rdfs:comment "Predicate used to define that a <subject> is used for <object>".
 
-:usedIn a rdf:predicate ;
-    rdfs:comment "Predicate used to define that a <subject> is used in <object>".
+# Applications domains
 
 :SmartHome a :ApplicationDomain .
 
@@ -29,127 +28,128 @@ PREFIX owl:  <http://www.w3.org/2002/07/owl#>
 
 :SmartCampus a :ApplicationDomain .
 
+# Applications
 
 :FallDetection a :Application ;
-    :usedIn :SmartHealth, :SmartHome.
+    :usedFor :SmartHealth, :SmartHome.
 
 :VoiceControl a :Application ;
     rdfs:comment "Control of microprocessors via voice, mobile application or web application." ;
-    :usedIn :SmartHome, :SmartCampus, :SmartHealth .
+    :usedFor :SmartHome, :SmartCampus, :SmartHealth .
     
 :PetCare a :Application;
-    :usedIn :SmartHealth, :SmartHome .
+    :usedFor :SmartHealth, :SmartHome .
 
 :EnergyManagement a :Application;
     rdfs:comment "Monitoring and consumption reduction." ;
-    :usedIn :SmartHome, :SmartFarm, :SmartCity, :SmartIndustry, :SmartCampus .
+    :usedFor :SmartHome, :SmartFarm, :SmartCity, :SmartIndustry, :SmartCampus .
 
 :WaterManagement a :Application;
     rdfs:comment "Monitoring and consumption reduction." ;
-    :usedIn :SmartHome, :SmartFarm, :SmartCity, :SmartIndustry, :SmartCampus .
+    :usedFor :SmartHome, :SmartFarm, :SmartCity, :SmartIndustry, :SmartCampus .
 
 :SmartSecurity a :Application ;
     rdfs:comment "Camera and sensor control for privacy and security" ;
-    :usedIn :SmartHome, :SmartFarm, :SmartCity, :SmartIndustry .
+    :usedFor :SmartHome, :SmartFarm, :SmartCity, :SmartIndustry .
 
 :IndoorLocation a :Application ; # TODO: renomear 
     rdfs:comment "Fingerprint based indoor localization system" ;
-    :usedIn :SmartHome, :SmartFarm .
+    :usedFor :SmartHome, :SmartFarm .
     
 :SmartGasDetection a :Application ;
-    :usedIn :SmartHome, :SmartIndustry, :SmartCampus, :SmartHealth .
+    :usedFor :SmartHome, :SmartIndustry, :SmartCampus, :SmartHealth .
 
 :SmartLighting a :Application ;
     rdfs:comment "Brightness control and monitor" ;
-    :usedIn :SmartHome, :SmartFarm, :SmartCity, :SmartIndustry, :SmartCampus, :SmartHealth .
+    :usedFor :SmartHome, :SmartFarm, :SmartCity, :SmartIndustry, :SmartCampus, :SmartHealth .
 
 :SmartTemperatureHumidity a :Application ;
     rdfs:comment "Control and monitor" ;
-    :usedIn :SmartHome, :SmartFarm, :SmartIndustry, :SmartCampus, :SmartHealth .
+    :usedFor :SmartHome, :SmartFarm, :SmartIndustry, :SmartCampus, :SmartHealth .
 
 :SmartCleaning a :Application ;
     rdfs:comment "Applications that help with general cleaning, such as dishes, clothes and floors" ;
-    :usedIn :SmartHome .
+    :usedFor :SmartHome .
 
 :SmartGarden a :Application;
-        :usedIn :SmartHome .
+        :usedFor :SmartHome .
 
 :SmartCooking a :Application ;
     rdfs:comment "Applications that make cooking easier and safer" ;
-    :usedIn :SmartHome .
+    :usedFor :SmartHome .
 
 :InventoryManagement a :Application ;
     rdfs:comment "Preserve and manage anything" ;
-    :usedIn :SmartHome, :SmartFarm, :SmartIndustry, :SmartCampus, :SmartHealth .
+    :usedFor :SmartHome, :SmartFarm, :SmartIndustry, :SmartCampus, :SmartHealth .
 
 :SmartParking a :Application ;
-    :usedIn :SmartCity .
+    :usedFor :SmartCity .
 
 :SmartClassroom a :Application;
-    :usedIn :SmartCampus .
+    :usedFor :SmartCampus .
 
 :SmartBedroom a :Application ;
-    :usedIn :SmartHome, :SmartHealth .
+    :usedFor :SmartHome, :SmartHealth .
 
 :CampusTalk a :Application ;
     rdfs:comment "An application that centralizes multiple smart campus applications";
     rdfs:seeAlso "Y. -B. Lin, L. -K. Chen, M. -Z. Shieh, Y. -W. Lin and T. -H. Yen, \"CampusTalk: IoT Devices and Their Interesting Features on Campus Applications,\" in IEEE Access, vol. 6, pp. 26036-26046, 2018, doi: 10.1109/ACCESS.2018.2832222. keywords: {Internet of Things;Smart phones;Sensors;Servers;Graphical user interfaces;Acceleration;Gyroscopes;Art design;campus applications;cyber and physical interaction;Internet of Things}" ;
-    :usedIn :SmartCampus .
+    :usedFor :SmartCampus .
 
 :SmartMobility a :Application ;
     rdfs:comment "It is a concept that aims to improve urban mobility by making travel more efficient, sustainable and safe, using cars, motorcycles, drones, among others." ;
-    :usedIn :SmartCity, :SmartCampus .
+    :usedFor :SmartCity, :SmartCampus .
 
 :SupplyChainManagement a :Application ;
     rdfs:comment "It's about managing the supply chain of any product with sensor data" ;
-    :usedIn :SmartFarm, :SmartCity, :SmartIndustry, :SmartCampus, :SmartHealth .
+    :usedFor :SmartFarm, :SmartCity, :SmartIndustry, :SmartCampus, :SmartHealth .
 
 :SmartMining a :Application ;
     rdfs:comment "Encompasses everything from worker safety to increasing extraction efficiency" ;
-    :usedIn :SmartIndustry .
+    :usedFor :SmartIndustry .
 
 :DisasterManagement a :Application ;
-    :usedIn :SmartFarm, :SmartCity, :SmartIndustry .
+    :usedFor :SmartFarm, :SmartCity, :SmartIndustry .
 
 :EnvironmentalMonitoringControl a :Application ;
-    :usedIn :SmartFarm, :SmartCity, :SmartIndustry .
+    :usedFor :SmartFarm, :SmartCity, :SmartIndustry .
 
 :SmartIrrigation a :Application ;
-    :usedIn :SmartFarm .
+    :usedFor :SmartFarm .
 
 :PlantMonitoring a :Application ;
-    :usedIn :SmartFarm .
+    :usedFor :SmartFarm .
 
 :AnimalMonitoring a :Application ;
-    :usedIn :SmartFarm .
+    :usedFor :SmartFarm .
 
 :SmartGreenhouse a :Application ;
-    :usedIn :SmartFarm, :SmartCampus .
+    :usedFor :SmartFarm, :SmartCampus .
 
 :FoodRating a :Application ;
     rdfs:comment "Food quality control" ;
-    :usedIn :SmartHealth, :SmartFarm .
+    :usedFor :SmartHealth, :SmartFarm .
 
 :FertilizerPesticideControl a :Application ;
-    :usedIn :SmartFarm .
+    :usedFor :SmartFarm .
 
 :MonitoringVitalSigns a :Application ;
-    :usedIn :SmartHealth .
+    :usedFor :SmartHealth .
 
 :MedicationAdherence a :Application ;
-    :usedIn :SmartHealth .
+    :usedFor :SmartHealth .
 
 :AssistiveTechnology a :Application ;
-    :usedIn :SmartHealth .
+    :usedFor :SmartHealth .
 
 :AgedCareMonitoring a :Application ;
-    :usedIn :SmartHealth .
+    :usedFor :SmartHealth .
 
 :PreventiveHealthMeasures a :Application ;
-    :usedIn :SmartHealth .
+    :usedFor :SmartHealth .
 
 :MentalCare a :Application ;
-    :usedIn :SmartHealth .
+    :usedFor :SmartHealth .
 
 :EmergencyAlarmSystem a :Application ;
-    :usedIn :SmartHome, :SmartFarm, :SmartCity, :SmartIndustry, :SmartCampus, :SmartHealth .
+    :usedFor :SmartHome, :SmartFarm, :SmartCity, :SmartIndustry, :SmartCampus, :SmartHealth .

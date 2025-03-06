@@ -5,369 +5,681 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
 PREFIX owl:  <http://www.w3.org/2002/07/owl#>
 PREFIX app: <http://nesped.caf.ufv.br/nomedataset/appAreas>
+PREFIX cot: <http://nesped.caf.ufv.br/nomedataset/contexts>
 
 :SmartObject a owl:Class .
 
+# Types of smart objects  
 
-
-:SmartFeeder a :SmartObject ;
+:SmartFeeder a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:PetCare , app:VoiceControl.
 
-:SmartCabinets a :SmartObject ;
+:SmartCabinets a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:InventoryManagement .
 
-:SmartPackaging a :SmartObject ;
+:SmartPackaging a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:SmartPackaging .
 
-:SmartCookware a :SmartObject ;
+:SmartCookware a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:SmartCooking .
 
-:SmartRefrigerator a :SmartObject ;
+:SmartRefrigerator a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:EnergyManagement , app:SmartHumidity , app:InventoryManagement.
 
-:SmartFreezer a :SmartObject ;
+:SmartFreezer a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:EnergyManagement , app:SmartHumidity , app:InventoryManagement.
 
-:SmartSilo a :SmartObject ;
+:SmartSilo a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:InventoryManagement .
 
-:SmartAirConditioner a :SmartObject ;
+:SmartAirConditioner a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:EnergyManagement , app:SmartBedRoom , app:SmartTemperature , app:VoiceControl.
 
-:SmartHeater a :SmartObject ;
+:SmartHeater a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:EnergyManagement , app:SmartTemperature .
 
-:SmartFan a :SmartObject ;
+:SmartFan a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:SmartTemperature , app:SmartBedRoom , app:VoiceControl.
 
-:SmartThermostat a :SmartObject ;
+:SmartThermostat a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:EnergyManagement , app:SmartTemperature , app:VoiceControl.
 
-:SmartStove a :SmartObject ;
+:SmartStove a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:SmartCooking .
 
-:SmartAirFryer a :SmartObject ;
+:SmartAirFryer a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:SmartCooking .
 
-:SmartOven a :SmartObject ;
+:SmartOven a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:SmartCooking .
 
-:SmartWindow a :SmartObject ;
+:SmartWindow a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:SmartLighting .
 
-:SmartCurtain a :SmartObject ;
+:SmartCurtain a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:SmartLighting .
 
-:SmartPlug a :SmartObject ;
+:SmartPlug a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:EnergyManagement , app:VoiceControl .
 
-:SmartSprinkler a :SmartObject ;
+:SmartSprinkler a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:SmartGarden , app:VoiceControl .
 
-:SmartDripper a :SmartObject ;
+:SmartDripper a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:SmartGarden , app:VoiceControl .
 
-:SmartShower a :SmartObject ;
+:SmartShower a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:WaterManagement .
 
-:SmartWaterDispenser a :SmartObject ;
+:SmartWaterDispenser a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:WaterManagement .
 
-:SmartWaterFilters a :SmartObject ;
+:SmartWaterFilters a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:WaterManagement .
 
-:SmartShirt a :SmartObject ;
+:SmartShirt a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:MonitoringVitalSigns .
 
-:SmartSneakers a :SmartObject ;
+:SmartSneakers a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:MonitoringVitalSigns .
 
-:MultiTreatmentStation a :SmartObject ;
+:MultiTreatmentStation a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:AssistiveTechnology , app:PreventiveHealthMeasures.
 
-:SmartWatch a :SmartObject ;
+:SmartWatch a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:MonitoringVitalSigns .
 
-:VRGlasses a :SmartObject ;
+:VRGlasses a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:AssistiveTechnology , app:SmartClassroom .
 
-:SmartHelmet a :SmartObject ;
+:SmartHelmet a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:SmartSecurity .
 
-:SmartRing a :SmartObject ;
+:SmartRing a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:MonitoringVitalSigns .
 
-:SmartNecklace a :SmartObject ;
+:SmartNecklace a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:MonitoringVitalSigns , app:AgedCareMonitoring .    
 
-:SmartBelt a :SmartObject ;
+:SmartBelt a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:MonitoringVitalSigns .
 
-:SmartEarring a :SmartObject ;
+:SmartEarring a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:MonitoringVitalSigns .
 
-:SmartMask a :SmartObject ;
+:SmartMask a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:MonitoringVitalSigns , app:PreventiveHealthMeasures .
 
-:SmartContinuousGlucoseMonitor a :SmartObject ;
+:SmartContinuousGlucoseMonitor a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:PreventiveHealthMeasures , app:MonitoringVitalSigns .
 
-:SmartAnkleBand a :SmartObject ;
+:SmartAnkleBand a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:AgedCareMonitoring , app:AssistiveTechnology , app:MonitoringVitalSigns .
 
-:SmartCollar a :SmartObject ;
+:SmartCollar a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:PetCare .
 
-:SmartPetTag a :SmartObject ;
+:SmartPetTag a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:PetCare .
 
-:SmartBoots a :SmartObject ;
+:SmartBoots a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:MonitoringVitalSigns , app:AssistiveTechnology.
 
-:SmartHeadphones a :SmartObject ;
+:SmartHeadphones a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:VoiceControl , app:MonitoringVitalSigns , app:SmartBedRoom .
 
-:SmartVests a :SmartObject ;
+:SmartVests a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:MonitoringVitalSigns , app:AssistiveTechnology .
 
-:SmartProsthetics a :SmartObject ;
+:SmartProsthetics a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:AssistiveTechnology .
 
-:SmartOrthosis a :SmartObject ;
+:SmartOrthosis a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:AssistiveTechnology .
 
-:SmartExoskeleton a :SmartObject ;
+:SmartExoskeleton a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:AssistiveTechnology .
 
-:SmartRehabilitationGlove a :SmartObject ;
+:SmartRehabilitationGlove a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:AssistiveTechnology .
 
-:SmartHearingAids a :SmartObject ;
+:SmartHearingAids a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:AssistiveTechnology .
 
-:TacticalEffectSuit a :SmartObject ;
+:TacticalEffectSuit a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:MonitoringVitalSigns .
 
-:SmartChair a :SmartObject ;
+:SmartChair a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:SmartClassroom .
 
-:SmartOdorDetectionandEmissionDevice a :SmartObject ;
+:SmartOdorDetectionandEmissionDevice a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:EnvironmentalMonitoringControl .
 
-:SmartGustatoryEffectDevice a :SmartObject ;
+:SmartGustatoryEffectDevice a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:FoodRating , app:EnvironmentalMonitoringControl.
 
-:ElectricalConductivityMeter a :SmartObject ;
+:ElectricalConductivityMeter a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:EnvironmentalMonitoringControl , app:DisasterManagement .
 
-:WaterPHMeters a :SmartObject ;
+:WaterPHMeters a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:EnvironmentalMonitoringControl , app:WaterManagement , app:SmartGarden.
 
-:OxidationReductionPotentialSensor a :SmartObject ;
+:OxidationReductionPotentialSensor a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:EnvironmentalMonitoringControl , app:DisasterManagement .
 
-:WaterSalinityMeter a :SmartObject ;
+:WaterSalinityMeter a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:EnvironmentalMonitoringControl , app:SmartGarden , app:DisasterManagement.
 
-:SpecificGravityMeter a :SmartObject ;
+:SpecificGravityMeter a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:EnvironmentalMonitoringControl, app:FoodRating .
 
-:TotalDissolvedSolidsMeter a :SmartObject ;
+:TotalDissolvedSolidsMeter a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:EnvironmentalMonitoringControl , app:DisasterManagement .
 
-:CarbonMonoxideSensor a :SmartObject ;
+:CarbonMonoxideSensor a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:EnvironmentalMonitoringControl , app:DisasterManagement .
 
-:FineParticulateMatterSensor a :SmartObject ;
+:FineParticulateMatterSensor a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:EnvironmentalMonitoringControl , app:DisasterManagement .
 
-:OzoneSensor a :SmartObject ;
+:OzoneSensor a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:EnvironmentalMonitoringControl , app:DisasterManagement .
 
-:ElectrochemicalSensor a :SmartObject ;
+:ElectrochemicalSensor a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:EnvironmentalMonitoringControl , app:DisasterManagement .
 
-:ElectroacousticSensor a :SmartObject ;
+:ElectroacousticSensor a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:EnvironmentalMonitoringControl , app:DisasterManagement .
 
-:SulfurDioxideSensor a :SmartObject ;
+:SulfurDioxideSensor a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:EnvironmentalMonitoringControl , app:DisasterManagement .
 
-:NitrousOxideSensor a :SmartObject ;
+:NitrousOxideSensor a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:EnvironmentalMonitoringControl , app:DisasterManagement .
 
-:AirHumiditySensor a :SmartObject ;
+:AirHumiditySensor a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
     app:usedFor app:EnvironmentalMonitoringControl , app:DisasterManagement , app:SmartTemperatureHumidity .
 
 :SoilNitrogenSensor a :SmartObject;
     app:usedFor app:EnvironmentalMonitoringControl , app:DisasterManagement .
 
-:SoilPhosphorusSensor a :SmartObject .
+:SoilPhosphorusSensor a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
+    .
+:SoilPotassiumSensor a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
+    .
+:SoilCarbonDioxideSensor a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
+    .
+:SoilPHSensor a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:SoilMoistureSensor a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:SoilElectricalConductivitySensor a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
+    .
+:SoilSalinitySensor a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:InfraredGasSensor a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:ElectrochemicalGasSensor a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
+    .
+:SemiconductorGasSensor a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
+    .
+:CatalyticGasSensor a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:GasLeakSensor a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:SmokeSensors a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:BiometricSensor a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:IntracorporealTemperatureSensor a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
+    .
+:GPSSensor a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:AmbientTemperatureSensor a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
+    .
+:LightSensor a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:InfraredSensor a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:ContactSensor a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:ProximitySensor a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:SoundPressureLevelSensor a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
+    .
+:PrecipitationSensor a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
+    .
+:FlameSensor a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:PiezoelectricSensor a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
+    .
+:PiezoresistivePressureSensor a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
+    .
+:CurrentSensor a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:VoltageSensor a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:SolarRadiationSensor a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
+    .
+:FloodSensors a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:MotionSensor a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:MechanicalPartsIntegritySensors a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
+    .
+:WaterFlowSensor a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:SmartAccelerometer a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:SmartMicrophones a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:VibrationSensor a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:SmartSonar a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:SmartFloor a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:SmartParkingSpaces a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:SmartSpeedBumps a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:SmartTrafficLights a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:SmartTrafficLights a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:SmartElectricFence a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:SmartFencesNonElectric a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
+    .
+:PerimeterSensor a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:ComputerPCDesktopServers a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
+    .
+:SmartTVs a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:SetTopBoxes a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:MediaPlayers a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:SmartBoards a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:SmartTelemetry a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:SelfServiceKiosk a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:SmartProjectors a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:SmartWhiteboards a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:InformationKiosks a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:SmartCars a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:SmartThreeWheelScooter a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
+    .
+:SmartMotorcycle a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:SmartHarvestingRobot a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
+    .
+:RoboticArm a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:SmartWeedingRobot a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:SmartSwitches a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:SmartEnergyMeterCircuitBreaker a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
+    .
+:SmartWalkers a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:SmartCommunicationBoard a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
+    .
+:SmartVocalizer a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:BrightSignSmartVocalizationGlove a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
+    .
+:SmartDryer a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:SmartWashingMachine a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
+    .
+:SmartPillBlisterPack a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
+    .
+:SmartPillOrganizer a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:SmartLightBulbs a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:SmartSatellite a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:RFID a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:Drones a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:Smart3DPrinter a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:SmartMat a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:SmartSpeakers a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:SmartMirror a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:SmartDoor a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:SmartLock a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:Cameras a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:IMedBoxSmartMedicalCase a owl:Class ;
+    rdfs:subClassOf :SmartObject ;
+    .
+: a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+:SmartCap a owl:Class ;
+    rdfs:subClassOf :SmartObject 
+    .
+
+# Instances of smart objects
+
+:HoneyGuardian a :SmartFeeder ;
+    rdfs:seeAlso <https://www.honeyguardian.com/collections/feeder/products/honeyguardian-3-5l-5l-smart-feeder-for-2-cats> ;
+    cot:physicalStorage [
+        a cot:DynamicContext ;  # Coloquei isso aqui de forma explícita porque esses
+        cot:maxInclusive 5.0 ;  # indicares de mínimo e máximo podem ser úteis também para contextos
+        cot:minInclusive 0.0 ;  # estáticos. Ex.: voltagem que o objeto suporta
+        qu:unit unit:litre
+    ] ;
+    cot:connectivity [
+        a cot:WiFiConnectivity ;
+        cot:wifiFrequency [
+            cot:value 2.4 ;
+            qu:unit unit:gigahertz
+        ]
+    ] ;
+    cot:controlInterface [
+        a cot:MobileAppInterface ;
+        cot:mobileAppOS [ a cot:Android ] ;
+        cot:mobileAppOS [ a cot:iOS ] ;
+    ] ;
+    # pulei: controle de alimentação
+    # pulei: vedação
+    cot:audioRecordStorage [
+        a cot:DynamicContext ;
+        cot:maxInclusive 5.0 ;
+        cot:minInclusive 0.0 ;
+        qu:unit unit:secondUnitOfTime
+    ] ;
+    cot:powerSupply [ a cot:UsbCSupply ] ; # Relembrando, penso que repetir uma propriedade
+    cot:powerSupply [                      # serviria pra indicar que existem essas opções,
+        a cot:BatterySupply ;              # e elas são independentes entre si.
+        cot:value 3 ;
+        qu:unit unit:batteryCellD  # Podemos estender a noção de unidade de medidada
+                                   # para unidade de itens específicos,
+                                   # nesse caso, baterias tipo D.
+                                   # Depois ver certinho como definir essa classe.
+    ] ;
+    cot:shape [
+        a cot:RectBox ;
+        cot:width  [ cot:value 20.32 ; qu:unit unit:centimetre ] ;
+        cot:height [ cot:value 17.78 ; qu:unit unit:centimetre ] ;
+        cot:length [ cot:value 27.94 ; qu:unit unit:centimetre ] ;
+    ] ;
+    cot:weight [ cot:value 1.88 ; qu:unit unit:kilogram ] ;
+    # pulei: cor
+    # pulei: material. Sei que existe ontologia sobre um monte de materiais, se achar necessário.
+    .
+
+
+:BHyve a :IrrigationController ;
+    rdfs:seeAlso <https://www.orbitonline.com/products/b-hyve-smart-indoor-outdoor-irrigation-controller> ;
+    # cot:material [ a cot:WaterproofMaterial ] ;  #  será hein?
+    # pulei: a feature de consultar a previsão do tempo. Deveria colocar? Se sim, como?
+    cot:controlInterface [ a cot:IntegratedControlInterface ] ;
+    cot:controlInterface [
+        a cot:MobileAppInterface ;
+        cot:mobileAppOS [
+            a cot:Android ;
+            cot:version [ cot:minInclusive "5.0" ] ;
+        ] ;
+        cot:mobileAppOS [
+            a cot:iOS ;
+            cot:version [ cot:minInclusive "13.5" ] ;
+        ] ;
+    ] ;
+    cot:powerSupply [
+        a cot:AcPowerSupply ;
+        cot:acInputVoltage  [ cot:value 120; qu:unit unit:volt ] ;
+        cot:acOutputVoltage [ cot:value 24; qu:unit unit:volt ] ;
+    ] ;
+    cot:connectivity [ a cot:WiFiConnectivity ] ;
+    cot:connectivity [ a cot:BluetoothConnectivity ] ;
+    # pulei: compatibilidade do sensor. Vale a pena ver se esse tipo de descrição se repete em outros objetos.
+    .
+
+:OuraRingGeneration3 a :SmartRing ;
+    rdfs:seeAlso <https://ouraring.com/product/rings> ;
+    cot:shape [
+        a cot:CylindShell;
+        cot:width [ cot:value 7.9 ; qu:unit unit:milimeter ] ;
+        cot:thickness [ cot:value 2.55 ; qu:unit unit:milimeter ] ;
+    ] ;
+    cot:connectivity [
+        a cot:BluetoothConnectivity ;
+        cot:hasSpec [ a cot:EMF-Safe ] ; 
+        cot:hasSpec [ a cot:AirplaneMode ] ; 
+    ] ;
+    cot:languageAvailability ( "English" "Finnish" "Japanese" "German" "French" "Spanish" "Italian" ) ;
+    cot:powerSupply [
+        a cot:BatterySupply ;
+        cot:value 1 ;
+        <#is> cot:rechargeable ;
+        cot:energyStorage [ cot:value 15; qu:unit unit:milliampere ] ;
+        <#is> cot:notReplaceable ;
+        qu:unit unit:batteryCellLiPO
+    ];
+    # pulei: a feature
+    .
 
-:SoilPotassiumSensor a :SmartObject .
-
-:SoilCarbonDioxideSensor a :SmartObject .
-
-:SoilPHSensor a :SmartObject .
-
-:SoilMoistureSensor a :SmartObject .
-
-:SoilElectricalConductivitySensor a :SmartObject .
-
-:SoilSalinitySensor a :SmartObject .
-
-:InfraredGasSensor a :SmartObject .
-
-:ElectrochemicalGasSensor a :SmartObject .
-
-:SemiconductorGasSensor a :SmartObject .
-
-:CatalyticGasSensor a :SmartObject .
-
-:GasLeakSensor a :SmartObject .
-
-:SmokeSensors a :SmartObject .
-
-:BiometricSensor a :SmartObject .
-
-:IntracorporealTemperatureSensor a :SmartObject .
-
-:GPSSensor a :SmartObject .
-
-:AmbientTemperatureSensor a :SmartObject .
-
-:LightSensor a :SmartObject .
-
-:InfraredSensor a :SmartObject .
-
-:ContactSensor a :SmartObject .
-
-:ProximitySensor a :SmartObject .
-
-:SoundPressureLevelSensor a :SmartObject .
-
-:PrecipitationSensor a :SmartObject .
-
-:FlameSensor a :SmartObject .
-
-:PiezoelectricSensor a :SmartObject .
-
-:PiezoresistivePressureSensor a :SmartObject .
-
-:CurrentSensor a :SmartObject .
-
-:VoltageSensor a :SmartObject .
-
-:SolarRadiationSensor a :SmartObject .
-
-:FloodSensors a :SmartObject .
-
-:MotionSensor a :SmartObject .
-
-:MechanicalPartsIntegritySensors a :SmartObject .
-
-:WaterFlowSensor a :SmartObject .
-
-:SmartAccelerometer a :SmartObject .
-
-:SmartMicrophones a :SmartObject .
-
-:VibrationSensor a :SmartObject .
-
-:SmartSonar a :SmartObject .
-
-:SmartFloor a :SmartObject .
-
-:SmartParkingSpaces a :SmartObject .
-
-:SmartSpeedBumps a :SmartObject .
-
-:SmartTrafficLights a :SmartObject .
-
-:SmartTrafficLights a :SmartObject .
-
-:SmartElectricFence a :SmartObject .
-
-:SmartFencesNonElectric a :SmartObject .
-
-:PerimeterSensor a :SmartObject .
-
-:ComputerPCDesktopServers a :SmartObject .
-
-:SmartTVs a :SmartObject .
-
-:SetTopBoxes a :SmartObject .
-
-:MediaPlayers a :SmartObject .
-
-:SmartBoards a :SmartObject .
-
-:SmartTelemetry a :SmartObject .
-
-:SelfServiceKiosk a :SmartObject .
-
-:SmartProjectors a :SmartObject .
-
-:SmartWhiteboards a :SmartObject .
-
-:InformationKiosks a :SmartObject .
-
-:SmartCars a :SmartObject .
-
-:SmartThreeWheelScooter a :SmartObject .
-
-:SmartMotorcycle a :SmartObject .
-
-:SmartHarvestingRobot a :SmartObject .
-
-:RoboticArm a :SmartObject .
-
-:SmartWeedingRobot a :SmartObject .
-
-:SmartSwitches a :SmartObject .
-
-:SmartEnergyMeterCircuitBreaker a :SmartObject .
-
-:SmartWalkers a :SmartObject .
-
-:SmartCommunicationBoard a :SmartObject .
-
-:SmartVocalizer a :SmartObject .
-
-:BrightSignSmartVocalizationGlove a :SmartObject .
-
-:SmartDryer a :SmartObject .
-
-:SmartWashingMachine a :SmartObject .
-
-:SmartPillBlisterPack a :SmartObject .
-
-:SmartPillOrganizer a :SmartObject .
-
-:SmartLightBulbs a :SmartObject .
-
-:SmartSatellite a :SmartObject .
-
-:RFID a :SmartObject .
-
-:Drones a :SmartObject .
-
-:Smart3DPrinter a :SmartObject .
-
-:SmartMat a :SmartObject .
-
-:SmartSpeakers a :SmartObject .
-
-:SmartMirror a :SmartObject .
-
-:SmartDoor a :SmartObject .
-
-:SmartLock a :SmartObject .
-
-:Cameras a :SmartObject .
-
-:IMedBoxSmartMedicalCase a :SmartObject .
-
-: a :SmartObject .
-
-:SmartCap a :SmartObject .
