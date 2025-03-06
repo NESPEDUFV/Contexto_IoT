@@ -1,0 +1,307 @@
+BASE         <http://nesped.caf.ufv.br/od4cot>
+PREFIX cot:  <#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX qu:   <http://purl.oclc.org/NET/ssnx/qu/qu#>
+PREFIX dim:  <http://purl.oclc.org/NET/ssnx/qu/dim#>
+PREFIX unit: <http://purl.oclc.org/NET/ssnx/qu/unit#>
+
+<> a owl:Ontology ;
+    owl:imports <http://purl.oclc.org/NET/ssnx/qu/qu> ,
+                <http://purl.oclc.org/NET/ssnx/qu/qu-rec20> ;  # Nesse aqui vc pode clicar e ver as dimensões e unidades que existem.
+                                                               # Pra ver o documento completo no navegador, coloca .owl no final do link.
+                                                               # Sem esse sufixo, vai abrir a documentação, que não tem todas as classes.
+    .
+
+cot:Context a owl:Class ;
+    rdfs:comment "Represents any context that can be associated to a smart object." ;
+    .
+
+cot:hasSpec a owl:ObjectProperty ;
+    rdfs:domain cot:Context ;
+    rdfs:range cot:Context ;
+    rdfs:comment "Indicates a further specification of a context." ;
+    .
+
+cot:DynamicContext a owl:Class ;
+    rdfs:subClassOf cot:Context,
+                    [ a owl:Restriction ;
+                      owl:onProperty cot:hasSpec ;
+                      owl:someValuesFrom cot:DynamicContext
+                    ] ;
+    rdfs:comment "Indicates a context whose current value can change over time, thus requiring a range of possible values to be specified." ;
+    .
+
+cot:StaticContext a owl:Class ;
+    rdfs:subClassOf cot:Context ;
+    owl:intersectionOf ( cot:Context [ owl:complementOf cot:DynamicContext ] ) ;
+    rdfs:comment "Indicates a context whose value does not change over time." ;
+    .
+
+cot:value a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain cot:StaticContext ;
+    .
+
+cot:minInclusive a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain cot:Context ;
+    .
+
+cot:maxInclusive a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain cot:Context ;
+    .
+
+cot:Shape a owl:Class ;
+    rdfs:subClassOf cot:Context ;
+    rdfs:comment "Represents the approximate shape and size of an object." ;
+    .
+
+cot:shape a owl:ObjectProperty ;
+    rdfs:subPropertyOf cot:hasContext ;
+    rdfs:range cot:Shape ;
+    .
+
+cot:RectBox a owl:Class ;
+    rdfs:subClassOf cot:Shape ;
+    rdfs:comment "Represents the shape of an object as a rectangular box." ;
+    owl:hasKey ( cot:width cot:height cot:length ) ;
+    .
+
+cot:width a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:subPropertyOf cot:hasSpec ;
+    rdfs:domain cot:Shape ;
+    .
+cot:height a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:subPropertyOf cot:hasSpec ;
+    rdfs:domain cot:Shape ;
+    .
+cot:length a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:subPropertyOf cot:hasSpec ;
+    rdfs:domain cot:Shape ;
+    .
+
+cot:Storage a owl:Class ;
+    rdfs:subClassOf cot:Context ;
+    rdfs:comment "Represents the capacity of an object to store information or other things." ;
+    .
+
+cot:PhysicalStorage a owl:Class ;
+    rdfs:subClassOf cot:Storage ;
+    rdfs:comment "Represents the capacity of an object to physically store other things inside itself." ;
+    .
+
+cot:physicalStorage a owl:ObjectProperty ;
+    rdfs:subPropertyOf cot:hasContext ;
+    rdfs:range cot:PhysicalStorage ;
+    .
+
+cot:DataStorage a owl:Class ;
+    rdfs:subClassOf cot:Storage ;
+    rdfs:comment "Represents the capacity of an object to store digital information." ;
+    .
+
+cot:AudioRecordStorage a owl:Class ;
+    rdfs:subClassOf cot:DataStorage ;
+    rdfs:comment "Represents the capacity of an object to store audio recordings." ;
+    .
+
+cot:audioRecordStorage a owl:ObjectProperty ;
+    rdfs:subPropertyOf cot:hasContext ;
+    rdfs:range cot:Context ;
+    .
+
+cot:PowerSupply a owl:Class ;
+    rdfs:subClassOf cot:Context ;
+    .
+
+cot:powerSupply a owl:ObjectProperty ;
+    rdfs:subPropertyOf cot:hasContext ;
+    rdfs:range cot:PowerSupply ;
+    .
+
+cot:UsbCSupply a owl:Class ;
+    rdfs:subClassOf cot:PowerSupply .
+
+cot:BatterySupply a owl:Class ;
+    rdfs:subClassOf cot:PowerSupply .
+
+cot:AcPowerSupply a owl:Class ;
+    rdfs:comment "An alternated current (AC) power supply." ;
+    rdfs:subClassOf cot:PowerSupply .
+
+cot:Voltage a owl:Class ;
+    rdfs:subClassOf cot:Context ;
+    .
+
+cot:acInputVoltage a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:subPropertyOf cot:hasSpec ;
+    rdfs:domain cot:AcPowerSupply ;
+    rdfs:range cot:Voltage ;
+    .
+
+cot:acOutputVoltage a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:subPropertyOf cot:hasSpec ;
+    rdfs:domain cot:AcPowerSupply ;
+    rdfs:range cot:Voltage ;
+    .
+
+cot:NetworkConnectivity a owl:Class ;
+    rdfs:subClassOf cot:Context ;
+    .
+
+cot:connectivity a owl:ObjectProperty ;
+    rdfs:subPropertyOf cot:hasContext ;
+    rdfs:range cot:NetworkConnectivity ;
+    .
+
+cot:WiFiConnectivity a owl:Class ;
+    rdfs:subClassOf cot:NetworkConnectivity ;
+    .
+
+cot:wifiFrequency a cot:ObjectProperty, cot:FunctionalProperty ;
+    rdfs:subClassOf cot:hasSpec ;
+    rdfs:domain cot:WiFiConnectivity ;
+    .
+
+cot:BluetoothConnectivity a owl:Class ;
+    rdfs:subClassOf cot:NetworkConnectivity ;
+    .
+
+cot:ControlInterface a owl:Class ;
+    rdfs:comment "An interface through which a smart object can be controlled or interacted with." ;
+    rdfs:subClassOf cot:Context ;
+    .
+
+cot:IntegratedControlInterface a owl:Class ;
+    rdfs:comment "A control interface integrated into the object itself." ;
+    rdfs:subClassOf cot:ControlInterface ;
+    .
+
+cot:controlInterface a owl:ObjectProperty ;
+    rdfs:subPropertyOf cot:hasContext ;
+    rdfs:range cot:ControlInterface ;
+    .
+
+cot:MobileAppInterface a owl:Class ;
+    rdfs:comment "A control interface mediated through a mobile application." ;
+    rdfs:subClassOf cot:ControlInterface ;
+    .
+
+cot:mobileAppOS a owl:ObjectProperty ;
+    rdfs:subPropertyOf cot:hasSpec ;
+    rdfs:domain cot:MobileAppInterface ;
+    rdfs:range cot:MobileAppOS ;
+    .
+
+cot:MobileAppOS a owl:Class ;
+    rdfs:comment "An operating system supported by a mobile application." ;
+    rdfs:subClassOf cot:Context ;
+    .
+
+cot:Android a owl:Class ;
+    rdfs:subClassOf cot:MobileAppOS ;
+    .
+
+cot:iOS a owl:Class ;
+    rdfs:subClassOf cot:MobileAppOS ;
+    .
+
+cot:version a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:subPropertyOf cot:hasSpec ;
+    rdfs:domain cot:MobileAppOS ;
+    .
+
+### objetos
+
+cot:SmartObject a owl:Class .
+
+cot:hasContext a owl:ObjectProperty ;
+    rdfs:domain cot:SmartObject ;
+    rdfs:range cot:Context ;
+    .
+
+cot:SmartFeeder a owl:Class ;
+    rdfs:subClassOf cot:SmartObject ;
+    .
+
+cot:IrrigationController a owl:Class ;
+    rdfs:subClassOf cot:SmartObject ;
+    .
+
+############ exemplos ############
+
+<#HoneyGuardianSmartFeeder> a cot:SmartFeeder ;
+    rdfs:seeAlso <https://www.honeyguardian.com/collections/feeder/products/honeyguardian-3-5l-5l-smart-feeder-for-2-cats> ;
+    cot:physicalStorage [
+        a cot:DynamicContext ;  # Coloquei isso aqui de forma explícita porque esses
+        cot:maxInclusive 5.0 ;  # indicares de mínimo e máximo podem ser úteis também para contextos
+        cot:minInclusive 0.0 ;  # estáticos. Ex.: voltagem que o objeto suporta
+        qu:unit unit:litre
+    ] ;
+    cot:connectivity [
+        a cot:WiFiConnectivity ;
+        cot:wifiFrequency [
+            cot:value 2.4 ;
+            qu:unit unit:gigahertz
+        ]
+    ] ;
+    cot:controlInterface [
+        a cot:MobileAppInterface ;
+        cot:mobileAppOS [ a cot:Android ] ;
+        cot:mobileAppOS [ a cot:iOS ] ;
+    ] ;
+    # pulei: controle de alimentação
+    # pulei: vedação
+    cot:audioRecordStorage [
+        a cot:DynamicContext ;
+        cot:maxInclusive 5.0 ;
+        cot:minInclusive 0.0 ;
+        qu:unit unit:secondUnitOfTime
+    ] ;
+    cot:powerSupply [ a cot:UsbCSupply ] ; # Relembrando, penso que repetir uma propriedade
+    cot:powerSupply [                      # serviria pra indicar que existem essas opções,
+        a cot:BatterySupply ;              # e elas são independentes entre si.
+        cot:value 3 ;
+        qu:unit unit:batteryCellD  # Podemos estender a noção de unidade de medidada
+                                   # para unidade de itens específicos,
+                                   # nesse caso, baterias tipo D.
+                                   # Depois ver certinho como definir essa classe.
+    ] ;
+    cot:shape [
+        a cot:RectBox ;
+        cot:width  [ cot:value 20.32 ; qu:unit unit:centimetre ] ;
+        cot:height [ cot:value 17.78 ; qu:unit unit:centimetre ] ;
+        cot:length [ cot:value 27.94 ; qu:unit unit:centimetre ] ;
+    ] ;
+    cot:weight [ cot:value 1.88 ; qu:unit unit:kilogram ] ;
+    # pulei: cor
+    # pulei: material. Sei que existe ontologia sobre um monte de materiais, se achar necessário.
+    .
+
+
+<#BHyveIrrigationController> a cot:IrrigationController ;
+    rdfs:seeAlso <https://www.orbitonline.com/products/b-hyve-smart-indoor-outdoor-irrigation-controller> ;
+    # cot:material [ a cot:WaterproofMaterial ] ;  #  será hein?
+    # pulei: a feature de consultar a previsão do tempo. Deveria colocar? Se sim, como?
+    cot:controlInterface [ a cot:IntegratedControlInterface ] ;
+    cot:controlInterface [
+        a cot:MobileAppInterface ;
+        cot:mobileAppOS [
+            a cot:Android ;
+            cot:version [ cot:minInclusive "5.0" ] ;
+        ] ;
+        cot:mobileAppOS [
+            a cot:iOS ;
+            cot:version [ cot:minInclusive "13.5" ] ;
+        ] ;
+    ] ;
+    cot:powerSupply [
+        a cot:AcPowerSupply ;
+        cot:acInputVoltage  [ cot:value 120; qu:unit unit:volt ] ;
+        cot:acOutputVoltage [ cot:value 24; qu:unit unit:volt ] ;
+    ] ;
+    cot:connectivity [ a cot:WiFiConnectivity ] ;
+    cot:connectivity [ a cot:BluetoothConnectivity ] ;
+    # pulei: compatibilidade do sensor. Vale a pena ver se esse tipo de descrição se repete em outros objetos.
+    .
