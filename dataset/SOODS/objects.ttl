@@ -115,65 +115,92 @@ PREFIX app: <http://nesped.caf.ufv.br/nomedataset/appAreas>
 :SmartAnkleBand a :SmartObject ;
     app:usedFor app:AgedCareMonitoring , app:AssistiveTechnology , app:MonitoringVitalSigns .
 
-:SmartCap a :SmartObject .
+:SmartCollar a :SmartObject ;
+    app:usedFor app:PetCare .
 
-:SmartCollar a :SmartObject .
+:SmartPetTag a :SmartObject ;
+    app:usedFor app:PetCare .
 
-:SmartPetTag a :SmartObject .
+:SmartBoots a :SmartObject ;
+    app:usedFor app:MonitoringVitalSigns , app:AssistiveTechnology.
 
-:SmartBoots a :SmartObject .
+:SmartHeadphones a :SmartObject ;
+    app:usedFor app:VoiceControl , app:MonitoringVitalSigns , app:SmartBedRoom .
 
-:SmartHeadphones a :SmartObject .
+:SmartVests a :SmartObject ;
+    app:usedFor app:MonitoringVitalSigns , app:AssistiveTechnology .
 
-:SmartVests a :SmartObject .
+:SmartProsthetics a :SmartObject ;
+    app:usedFor app:AssistiveTechnology .
 
-:SmartProsthetics a :SmartObject .
+:SmartOrthosis a :SmartObject ;
+    app:usedFor app:AssistiveTechnology .
 
-:SmartOrthosis a :SmartObject .
+:SmartExoskeleton a :SmartObject ;
+    app:usedFor app:AssistiveTechnology .
 
-:SmartExoskeleton a :SmartObject .
+:SmartRehabilitationGlove a :SmartObject ;
+    app:usedFor app:AssistiveTechnology .
 
-:SmartRehabilitationGlove a :SmartObject .
+:SmartHearingAids a :SmartObject ;
+    app:usedFor app:AssistiveTechnology .
 
-:SmartHearingAids a :SmartObject .
+:TacticalEffectSuit a :SmartObject ;
+    app:usedFor app:MonitoringVitalSigns .
 
-:SmartHapticSuit a :SmartObject .
+:SmartChair a :SmartObject ;
+    app:usedFor app:SmartClassroom .
 
-:SmartChair a :SmartObject .
+:SmartOdorDetectionandEmissionDevice a :SmartObject ;
+    app:usedFor app:EnvironmentalMonitoringControl .
 
-:SmartOdorDetectionandEmissionDevice a :SmartObject .
+:SmartGustatoryEffectDevice a :SmartObject ;
+    app:usedFor app:FoodRating , app:EnvironmentalMonitoringControl.
 
-:SmartGustatoryEffectDevice a :SmartObject .
+:ElectricalConductivityMeter a :SmartObject ;
+    app:usedFor app:EnvironmentalMonitoringControl , app:DisasterManagement .
 
-:ElectricalConductivityMeter a :SmartObject .
+:WaterPHMeters a :SmartObject ;
+    app:usedFor app:EnvironmentalMonitoringControl , app:WaterManagement , app:SmartGarden.
 
-:WaterPHMeters a :SmartObject .
+:OxidationReductionPotentialSensor a :SmartObject ;
+    app:usedFor app:EnvironmentalMonitoringControl , app:DisasterManagement .
 
-:OxidationReductionPotentialSensor a :SmartObject .
+:WaterSalinityMeter a :SmartObject ;
+    app:usedFor app:EnvironmentalMonitoringControl , app:SmartGarden , app:DisasterManagement.
 
-:WaterSalinityMeter a :SmartObject .
+:SpecificGravityMeter a :SmartObject ;
+    app:usedFor app:EnvironmentalMonitoringControl, app:FoodRating .
 
-:SpecificGravityMeter a :SmartObject .
+:TotalDissolvedSolidsMeter a :SmartObject ;
+    app:usedFor app:EnvironmentalMonitoringControl , app:DisasterManagement .
 
-:TotalDissolvedSolidsMeter a :SmartObject .
+:CarbonMonoxideSensor a :SmartObject ;
+    app:usedFor app:EnvironmentalMonitoringControl , app:DisasterManagement .
 
-:CarbonMonoxideSensor a :SmartObject .
+:FineParticulateMatterSensor a :SmartObject ;
+    app:usedFor app:EnvironmentalMonitoringControl , app:DisasterManagement .
 
-:FineParticulateMatterSensor a :SmartObject .
+:OzoneSensor a :SmartObject ;
+    app:usedFor app:EnvironmentalMonitoringControl , app:DisasterManagement .
 
-:OzoneSensor a :SmartObject .
+:ElectrochemicalSensor a :SmartObject ;
+    app:usedFor app:EnvironmentalMonitoringControl , app:DisasterManagement .
 
-:ElectrochemicalSensor a :SmartObject .
+:ElectroacousticSensor a :SmartObject ;
+    app:usedFor app:EnvironmentalMonitoringControl , app:DisasterManagement .
 
-:ElectroacousticSensor a :SmartObject .
+:SulfurDioxideSensor a :SmartObject ;
+    app:usedFor app:EnvironmentalMonitoringControl , app:DisasterManagement .
 
-:SulfurDioxideSensor a :SmartObject .
+:NitrousOxideSensor a :SmartObject ;
+    app:usedFor app:EnvironmentalMonitoringControl , app:DisasterManagement .
 
-:NitrousOxideSensor a :SmartObject .
+:AirHumiditySensor a :SmartObject ;
+    app:usedFor app:EnvironmentalMonitoringControl , app:DisasterManagement , app:SmartTemperatureHumidity .
 
-:AirHumiditySensor a :SmartObject .
-
-:SoilNitrogenSensor a :SmartObject .
+:SoilNitrogenSensor a :SmartObject;
+    app:usedFor app:EnvironmentalMonitoringControl , app:DisasterManagement .
 
 :SoilPhosphorusSensor a :SmartObject .
 
@@ -261,7 +288,7 @@ PREFIX app: <http://nesped.caf.ufv.br/nomedataset/appAreas>
 
 :SmartElectricFence a :SmartObject .
 
-:SmartFencesNon-Electric a :SmartObject .
+:SmartFencesNonElectric a :SmartObject .
 
 :PerimeterSensor a :SmartObject .
 
@@ -342,3 +369,5 @@ PREFIX app: <http://nesped.caf.ufv.br/nomedataset/appAreas>
 :IMedBoxSmartMedicalCase a :SmartObject .
 
 : a :SmartObject .
+
+:SmartCap a :SmartObject .
