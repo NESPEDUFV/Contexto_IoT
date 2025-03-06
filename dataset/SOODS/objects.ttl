@@ -79,34 +79,41 @@ PREFIX app: <http://nesped.caf.ufv.br/nomedataset/appAreas>
 :SmartShirt a :SmartObject ;
     app:usedFor app:MonitoringVitalSigns .
 
-:SmartSneakers a :SmartObject .
+:SmartSneakers a :SmartObject ;
+    app:usedFor app:MonitoringVitalSigns .
 
+:MultiTreatmentStation a :SmartObject ;
+    app:usedFor app:AssistiveTechnology , app:PreventiveHealthMeasures.
 
-:SmartRaincoat a :SmartObject .
+:SmartWatch a :SmartObject ;
+    app:usedFor app:MonitoringVitalSigns .
 
-:MultiTreatmentStation a :SmartObject .
+:VRGlasses a :SmartObject ;
+    app:usedFor app:AssistiveTechnology , app:SmartClassroom .
 
-:SmartWatch a :SmartObject .
+:SmartHelmet a :SmartObject ;
+    app:usedFor app:SmartSecurity .
 
-:VRGlasses a :SmartObject .
+:SmartRing a :SmartObject ;
+    app:usedFor app:MonitoringVitalSigns .
 
-:SmartHelmet a :SmartObject .
+:SmartNecklace a :SmartObject ;
+    app:usedFor app:MonitoringVitalSigns , app:AgedCareMonitoring .    
 
-:SmartRing a :SmartObject .
+:SmartBelt a :SmartObject ;
+    app:usedFor app:MonitoringVitalSigns .
 
-:SmartNecklace a :SmartObject .
+:SmartEarring a :SmartObject ;
+    app:usedFor app:MonitoringVitalSigns .
 
-:SmartBracelet a :SmartObject .
+:SmartMask a :SmartObject ;
+    app:usedFor app:MonitoringVitalSigns , app:PreventiveHealthMeasures .
 
-:SmartBelt a :SmartObject .
+:SmartContinuousGlucoseMonitor a :SmartObject ;
+    app:usedFor app:PreventiveHealthMeasures , app:MonitoringVitalSigns .
 
-:SmartEarring a :SmartObject .
-
-:SmartMask a :SmartObject .
-
-:SmartContinuousGlucoseMonitor a :SmartObject .
-
-:SmartAnkleBand a :SmartObject .
+:SmartAnkleBand a :SmartObject ;
+    app:usedFor app:AgedCareMonitoring , app:AssistiveTechnology , app:MonitoringVitalSigns .
 
 :SmartCap a :SmartObject .
 
