@@ -154,13 +154,11 @@ PREFIX owl:  <http://www.w3.org/2002/07/owl#>
 :BatterySupply a owl:Class ;
     rdfs:subClassOf :PowerSupply .
 
-:rechargeable a owl:ObjectProperty, owl:FunctionalProperty ;
-    rdfs:subPropertyOf :hasSpec ;
+:Rechargeable a owl:Class ;
     rdfs:domain :BatterySupply ;
     .
 
-:replaceable a owl:ObjectProperty ;
-    rdfs:subPropertyOf :hasSpec ;
+:Replaceable a owl:Class ;
     rdfs:domain :BatterySupply ;
     .
 
@@ -279,3 +277,35 @@ PREFIX owl:  <http://www.w3.org/2002/07/owl#>
     rdfs:subPropertyOf :hasContext ;
     rdfs:range :LanguageAvailability ;
     .
+
+:Feature a owl:Class ;
+    rdfs:comment "A feature that a context-aware smart object has that can be used in a system." ;
+    rdfs:subClassOf :Context ;
+    .
+
+:feature a owl:ObjectProperty ;
+    rdfs:subPropertyOf :hasContext ;
+    rdfs:range :Feature ;
+    .
+
+:BodyTempMonitorFeat a owl:Class ;
+    rdfs:comment "A feature of a body temperature monitor/sensor" ;
+    rdfs:subClassOf :Feature ;
+    .
+
+:BloodOxygMonitorFeat a owl:Class ;
+    rdfs:comment "A feature of a blood oxygen monitor/sensor" ;
+    rdfs:subClassOf :Feature ;
+    .
+
+:HeartRateMonitorFeat a owl:Class ;
+    rdfs:comment "A feature of a heart rate monitor/sensor" ;
+    rdfs:subClassOf :Feature ;
+    .
+
+:MotionMonitorFeat a owl:Class ;
+    rdfs:comment "A feature of a motion monitor/sensor" ;
+    rdfs:subClassOf :Feature ;
+    .
+
+

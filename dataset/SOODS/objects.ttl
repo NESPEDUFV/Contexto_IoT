@@ -584,7 +584,7 @@ PREFIX cot: <http://nesped.caf.ufv.br/nomedataset/contexts>
 
 # Instances of smart objects
 
-:HoneyGuardian a :SmartFeeder ;
+:HoneyGuardian rdf:type :SmartFeeder ;
     rdfs:seeAlso <https://www.honeyguardian.com/collections/feeder/products/honeyguardian-3-5l-5l-smart-feeder-for-2-cats> ;
     cot:physicalStorage [
         a cot:DynamicContext ;  # Coloquei isso aqui de forma explícita porque esses
@@ -633,7 +633,7 @@ PREFIX cot: <http://nesped.caf.ufv.br/nomedataset/contexts>
     .
 
 
-:BHyve a :IrrigationController ;
+:BHyve rdf:type :IrrigationController ;
     rdfs:seeAlso <https://www.orbitonline.com/products/b-hyve-smart-indoor-outdoor-irrigation-controller> ;
     # cot:material [ a cot:WaterproofMaterial ] ;  #  será hein?
     # pulei: a feature de consultar a previsão do tempo. Deveria colocar? Se sim, como?
@@ -659,7 +659,7 @@ PREFIX cot: <http://nesped.caf.ufv.br/nomedataset/contexts>
     # pulei: compatibilidade do sensor. Vale a pena ver se esse tipo de descrição se repete em outros objetos.
     .
 
-:OuraRingGeneration3 a :SmartRing ;
+:OuraRingGeneration3 rdf:type :SmartRing ;
     rdfs:seeAlso <https://ouraring.com/product/rings> ;
     cot:shape [
         a cot:CylindShell;
@@ -667,7 +667,7 @@ PREFIX cot: <http://nesped.caf.ufv.br/nomedataset/contexts>
         cot:thickness [ cot:value 2.55 ; qu:unit unit:milimeter ] ;
     ] ;
     cot:connectivity [
-        a cot:BluetoothConnectivity ;
+        a cot:BLEConnectivity ;
         cot:hasSpec [ a cot:EMF-Safe ] ; 
         cot:hasSpec [ a cot:AirplaneMode ] ; 
     ] ;
@@ -675,11 +675,58 @@ PREFIX cot: <http://nesped.caf.ufv.br/nomedataset/contexts>
     cot:powerSupply [
         a cot:BatterySupply ;
         cot:value 1 ;
-        <#is> cot:rechargeable ;
+        cot:hasSpec cot:rechargeable ;
         cot:energyStorage [ cot:value 15; qu:unit unit:milliampere ] ;
-        <#is> cot:notReplaceable ;
+        cot:hasSpec cot:notReplaceable ;
         qu:unit unit:batteryCellLiPO
     ];
-    # pulei: a feature
+    cot:feature [
+        cot:hasSpec cot:BodyTempMonitorFeat ;
+        cot:hasSpec cot:BloodOxygMonitorFeat ;
+        cot:hasSpec cot:HeartRateMonitorFeat ;
+        cot:hasSpec cot:MotionMonitorFeat ;
+    ] ;
     .
+
+:UltrahumanRingAIR rdf:type :SmartRing ;
+    rdfs:seeAlso <https://www.ultrahuman.com/ring/buy/global/> ;
+    cot:shape [
+        a cot:CylindShell;
+        cot:width [ cot:value 8.1 ; qu:unit unit:milimeter ] ;
+        cot:thickness [ cot:value 2.45 ; qu:unit unit:milimeter ] ;
+    ] ;
+    cot:weight [ cot:value 2.4 ; qu:unit unit:gram ] ;
+    cot:connectivity [
+        a cot:BLEConnectivity ;
+        cot:hasSpec [ a cot:EMF-Safe ] ;
+        #cot:version 5 ; poderia inserir a versão aqui, tornar version mais geral
+    ] ;
+    cot:controlInterface [
+        a cot:MobileAppInterface ;
+        cot:mobileAppOS [
+            a cot:Android ;
+            cot:version [ cot:minInclusive "6.0" ] ;
+        ] ;
+        cot:mobileAppOS [
+            a cot:iOS ;
+            cot:version [ cot:minInclusive "15" ] ;
+        ] ;
+    ] ;
+    cot:powerSupply [
+        a cot:BatterySupply ;
+        cot:value 1 ;
+        cot:hasSpec cot:rechargeable ;
+        cot:energyStorage [ cot:value 24; qu:unit unit:milliampere ] ;
+        cot:hasSpec cot:notReplaceable ;
+        qu:unit unit:batteryCellLiPO
+    ];
+    cot:feature [
+        cot:hasSpec cot:BodyTempMonitorFeat ;
+        cot:hasSpec cot:BloodOxygMonitorFeat ;
+        cot:hasSpec cot:HeartRateMonitorFeat ;
+        cot:hasSpec cot:MotionMonitorFeat ;
+    ] ;
+    .
+
+    # colocar os sensores que o objeto possui?
 
