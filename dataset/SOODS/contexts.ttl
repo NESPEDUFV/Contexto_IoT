@@ -162,7 +162,7 @@ PREFIX owl:  <http://www.w3.org/2002/07/owl#>
     rdfs:domain :BatterySupply ;
     .
 
-:notReplaceable a owl:ObjectProperty ;
+:NotReplaceable a owl:ObjectProperty ;
     rdfs:subPropertyOf :hasSpec ;
     rdfs:domain :BatterySupply ;
     .
@@ -264,9 +264,14 @@ PREFIX owl:  <http://www.w3.org/2002/07/owl#>
     rdfs:subClassOf :MobileAppOS ;
     .
 
-:version a owl:ObjectProperty, owl:FunctionalProperty ;
-    rdfs:subPropertyOf :hasSpec ;
-    rdfs:domain :MobileAppOS ;
+:Version a owl:Class ;
+    rdfs:comment: "The version of something" ;
+    rdfs:subClassOf :Context ;
+    .
+
+:version a owl:ObjectProperty ;
+    rdfs:subPropertyOf :hasContext ;
+    rdfs:range :Version ;
     .
 
 :LanguageAvailability a owl:Class ;
@@ -276,6 +281,16 @@ PREFIX owl:  <http://www.w3.org/2002/07/owl#>
 :languageAvailability a owl:ObjectProperty ;
     rdfs:subPropertyOf :hasContext ;
     rdfs:range :LanguageAvailability ;
+    .
+
+:Name a owl:Class ;
+    rdfs:comment "Word or expression that designates something to someone" ;
+    rdfs:subClassOf :Context ;
+    .
+
+:name a owl:ObjectProperty ;
+    rdfs:subPropertyOf :hasContext ;
+    rdfs:range :Name ;
     .
 
 :Feature a owl:Class ;
@@ -308,4 +323,29 @@ PREFIX owl:  <http://www.w3.org/2002/07/owl#>
     rdfs:subClassOf :Feature ;
     .
 
+:FeedControl a owl:Class ;
+    rdfs:comment "A complex context about feeding control" ;
+    rdfs:subClassOf :Context ;
+    .
 
+:feedControl a owl:ObjectProperty ;
+    rdfs:subPropertyOf :hasContext ;
+    rdfs:range :FeedControl ;
+    .
+
+:NumberMeals a owl:Class ;
+    rdfs:comment "The number of meals per day" ;
+    rdfs:subClassOf :Context ;
+    .
+
+:numberMeals a owl:ObjectProperty ;
+    rdfs:subPropertyOf :hasContext ;
+    rdfs:range :NumberMeals ;
+    .
+
+# :Quantidade(peso) da porçao a owl:ObjectProperty ;
+
+# :Quantidadede porçoes por refeiçao
+
+# criar classe pra descrever funçoes programáveis 
+# ou tratar como contexto dinamico?

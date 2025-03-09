@@ -601,6 +601,7 @@ PREFIX cot: <http://nesped.caf.ufv.br/nomedataset/contexts>
     ] ;
     cot:controlInterface [
         a cot:MobileAppInterface ;
+        cot:name "HGsmart" ;
         cot:mobileAppOS [ a cot:Android ] ;
         cot:mobileAppOS [ a cot:iOS ] ;
     ] ;
@@ -608,7 +609,7 @@ PREFIX cot: <http://nesped.caf.ufv.br/nomedataset/contexts>
     # pulei: vedação
     cot:audioRecordStorage [
         a cot:DynamicContext ;
-        cot:maxInclusive 5.0 ;
+        cot:maxInclusive 10.0 ;
         cot:minInclusive 0.0 ;
         qu:unit unit:secondUnitOfTime
     ] ;
@@ -629,7 +630,7 @@ PREFIX cot: <http://nesped.caf.ufv.br/nomedataset/contexts>
     ] ;
     cot:weight [ cot:value 1.88 ; qu:unit unit:kilogram ] ;
     # pulei: cor
-    # pulei: material. Sei que existe ontologia sobre um monte de materiais, se achar necessário.
+    # pulei: material. Sei que existe ontologia sobre um monte de materiais, se achar necessário. Acho relevante
     .
 
 
@@ -675,9 +676,9 @@ PREFIX cot: <http://nesped.caf.ufv.br/nomedataset/contexts>
     cot:powerSupply [
         a cot:BatterySupply ;
         cot:value 1 ;
-        cot:hasSpec cot:rechargeable ;
+        cot:hasSpec cot:Rechargeable ;
         cot:energyStorage [ cot:value 15; qu:unit unit:milliampere ] ;
-        cot:hasSpec cot:notReplaceable ;
+        cot:hasSpec cot:NotReplaceable ;
         qu:unit unit:batteryCellLiPO
     ];
     cot:feature [
@@ -699,10 +700,11 @@ PREFIX cot: <http://nesped.caf.ufv.br/nomedataset/contexts>
     cot:connectivity [
         a cot:BLEConnectivity ;
         cot:hasSpec [ a cot:EMF-Safe ] ;
-        #cot:version 5 ; poderia inserir a versão aqui, tornar version mais geral
+        cot:version 5 ;
     ] ;
     cot:controlInterface [
         a cot:MobileAppInterface ;
+        cot:name "Ultrahuman" ; 
         cot:mobileAppOS [
             a cot:Android ;
             cot:version [ cot:minInclusive "6.0" ] ;
@@ -715,9 +717,9 @@ PREFIX cot: <http://nesped.caf.ufv.br/nomedataset/contexts>
     cot:powerSupply [
         a cot:BatterySupply ;
         cot:value 1 ;
-        cot:hasSpec cot:rechargeable ;
+        cot:hasSpec cot:Rechargeable ;
         cot:energyStorage [ cot:value 24; qu:unit unit:milliampere ] ;
-        cot:hasSpec cot:notReplaceable ;
+        cot:hasSpec cot:NotReplaceable ;
         qu:unit unit:batteryCellLiPO
     ];
     cot:feature [
@@ -728,5 +730,15 @@ PREFIX cot: <http://nesped.caf.ufv.br/nomedataset/contexts>
     ] ;
     .
 
-    # colocar os sensores que o objeto possui?
+    # colocar os sensores que o objeto possui? sim, como feature mesmo? 
+    # ou criar uma nova classe para definir os que tem?
+    
+    # faz sentido ser subpropriedade de feature
+    # ou melhor o inverso? feature ser subpropriedade dos sensores
+    
+    # sensores diferentes fazem as mesmas coisas ou
+    # features diferentes pro mesmo sensor?
+
+    # feature necessariamente está ligada a sensores?
+
 
