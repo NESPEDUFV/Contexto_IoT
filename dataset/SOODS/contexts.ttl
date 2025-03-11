@@ -149,10 +149,12 @@ PREFIX owl:  <http://www.w3.org/2002/07/owl#>
     .
 
 :UsbCSupply a owl:Class ;
-    rdfs:subClassOf :PowerSupply .
+    rdfs:subClassOf :PowerSupply ;
+    .
 
 :BatterySupply a owl:Class ;
-    rdfs:subClassOf :PowerSupply .
+    rdfs:subClassOf :PowerSupply ;
+    .
 
 :Rechargeable a owl:Class ;
     rdfs:domain :BatterySupply ;
@@ -162,9 +164,14 @@ PREFIX owl:  <http://www.w3.org/2002/07/owl#>
     rdfs:domain :BatterySupply ;
     .
 
-:NotReplaceable a owl:ObjectProperty ;
+:NotReplaceable a owl:Class ;
     rdfs:subPropertyOf :hasSpec ;
     rdfs:domain :BatterySupply ;
+    .
+
+:Sealing a owl:Class ;
+    rdfs:subPropertyOf :hasSpec ;
+    rdfs:domain :Context ;
     .
 
 :AcPowerSupply a owl:Class ;
@@ -174,6 +181,12 @@ PREFIX owl:  <http://www.w3.org/2002/07/owl#>
 
 :Voltage a owl:Class ;
     rdfs:subClassOf :Context ;
+    .
+
+:cableLength a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:subPropertyOf :hasSpec ;
+    rdfs:domain :AcPowerSupply ;
+    rdfs:range :length ;
     .
 
 :acInputVoltage a owl:ObjectProperty, owl:FunctionalProperty ;
@@ -323,6 +336,21 @@ PREFIX owl:  <http://www.w3.org/2002/07/owl#>
     rdfs:subClassOf :Feature ;
     .
 
+:SteamVBARemover a owl:Class ;
+    rdfs:comment "function that removes viruses, bacteria, and allergens using steam" ;
+    rdfs:subClassOf :Feature ;
+    . 
+
+:OdorRemover a owl:Class ;
+    rdfs:comment "Function that removes odor from clothes" ;
+    rdfs:subClassOf :Feature ;
+    .
+
+:DehumidifyFeat a owl:Class ;
+    rdfs:comment "Removes the indoor humidity" ;
+    rdfs:subClassOf :Feature ;
+    .
+
 :FeedControl a owl:Class ;
     rdfs:comment "A complex context about feeding control" ;
     rdfs:subClassOf :Context ;
@@ -343,9 +371,41 @@ PREFIX owl:  <http://www.w3.org/2002/07/owl#>
     rdfs:range :NumberMeals ;
     .
 
-# :Quantidade(peso) da porçao a owl:ObjectProperty ;
+:ServingSize a owl:Class ;
+    rdfs:comment "The serving size of a portion" ;
+    rdfs:subClassOf :Context ;
+    .
 
-# :Quantidadede porçoes por refeiçao
+:servingSize a owl:ObjectProperty ;
+    rdfs:subPropertyOf :hasContext ;
+    rdfs:range :ServingSize ;
+    .
 
-# criar classe pra descrever funçoes programáveis 
-# ou tratar como contexto dinamico?
+:ServingsPerMeal a owl:Class ;
+    rdfs:comment "The amount of servings per meal" ;
+    rdfs:subClassOf :Context ;
+    .
+
+:servingsPerMeal a owl:ObjectProperty ;
+    rdfs:subPropertyOf :hasContext ;
+    rdfs:range :ServingsPerMeal ;
+    .
+
+:Location a owl:Class ;
+    rdfs:comment "The location of the smart object" ;
+    rdfs:subClassOf :Context ;
+    owl:hasKey ( :latitude :longitude ) ;
+    .
+
+:latitude a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:subPropertyOf :hasSpec ;
+    rdfs:domain :Location ;
+    .
+
+:longitude a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:subPropertyOf :hasSpec ;
+    rdfs:domain :Location ;
+    .
+
+# Lg Webos Tv como OS aceitável, mas é de TV e nn mobile
+# contexto para LGStyler

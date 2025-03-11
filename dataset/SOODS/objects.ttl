@@ -574,9 +574,6 @@ PREFIX cot: <http://nesped.caf.ufv.br/nomedataset/contexts>
 :IMedBoxSmartMedicalCase a owl:Class ;
     rdfs:subClassOf :SmartObject ;
     .
-: a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
 
 :SmartCap a owl:Class ;
     rdfs:subClassOf :SmartObject 
@@ -605,8 +602,17 @@ PREFIX cot: <http://nesped.caf.ufv.br/nomedataset/contexts>
         cot:mobileAppOS [ a cot:Android ] ;
         cot:mobileAppOS [ a cot:iOS ] ;
     ] ;
-    # pulei: controle de alimentação
-    # pulei: vedação
+    cot:feedControl [
+        cot:numberMeals 6 ;
+        cot:servingSize [ cot:value 6.0 ; qu:unit unit:gram ] ;
+        cot:servingsPerMeal [ 
+            a cot:DynamicContext ;
+            cot:maxInclusive 24 ;
+            cot:minInclusive 0 ;
+            qu:unit qu:servingsPerMeal #??
+        ] ;
+    ] ;
+    cot:hasSpec cot:Sealing ; 
     cot:audioRecordStorage [
         a cot:DynamicContext ;
         cot:maxInclusive 10.0 ;
@@ -629,7 +635,7 @@ PREFIX cot: <http://nesped.caf.ufv.br/nomedataset/contexts>
         cot:length [ cot:value 27.94 ; qu:unit unit:centimetre ] ;
     ] ;
     cot:weight [ cot:value 1.88 ; qu:unit unit:kilogram ] ;
-    # pulei: cor
+    # pulei: cor relevante?
     # pulei: material. Sei que existe ontologia sobre um monte de materiais, se achar necessário. Acho relevante
     .
 
@@ -641,6 +647,7 @@ PREFIX cot: <http://nesped.caf.ufv.br/nomedataset/contexts>
     cot:controlInterface [ a cot:IntegratedControlInterface ] ;
     cot:controlInterface [
         a cot:MobileAppInterface ;
+        cot:name "B-hyve" ;
         cot:mobileAppOS [
             a cot:Android ;
             cot:version [ cot:minInclusive "5.0" ] ;
@@ -677,7 +684,7 @@ PREFIX cot: <http://nesped.caf.ufv.br/nomedataset/contexts>
         a cot:BatterySupply ;
         cot:value 1 ;
         cot:hasSpec cot:Rechargeable ;
-        cot:energyStorage [ cot:value 15; qu:unit unit:milliampere ] ;
+        cot:energyStorage [ cot:value 15.0 ; qu:unit unit:milliampere ] ;
         cot:hasSpec cot:NotReplaceable ;
         qu:unit unit:batteryCellLiPO
     ];
@@ -718,10 +725,10 @@ PREFIX cot: <http://nesped.caf.ufv.br/nomedataset/contexts>
         a cot:BatterySupply ;
         cot:value 1 ;
         cot:hasSpec cot:Rechargeable ;
-        cot:energyStorage [ cot:value 24; qu:unit unit:milliampere ] ;
+        cot:energyStorage [ cot:value 24.0 ; qu:unit unit:milliampere ] ;
         cot:hasSpec cot:NotReplaceable ;
         qu:unit unit:batteryCellLiPO
-    ];
+    ] ;
     cot:feature [
         cot:hasSpec cot:BodyTempMonitorFeat ;
         cot:hasSpec cot:BloodOxygMonitorFeat ;
@@ -730,15 +737,107 @@ PREFIX cot: <http://nesped.caf.ufv.br/nomedataset/contexts>
     ] ;
     .
 
-    # colocar os sensores que o objeto possui? sim, como feature mesmo? 
-    # ou criar uma nova classe para definir os que tem?
-    
-    # faz sentido ser subpropriedade de feature
-    # ou melhor o inverso? feature ser subpropriedade dos sensores
-    
-    # sensores diferentes fazem as mesmas coisas ou
-    # features diferentes pro mesmo sensor?
+:PantryOn rdf:type :SmartCabinets ;
+    rdfs:seeAlso <https://pantryon.com/collections/products/products/pantryon-bruno> ;
+     cot:physicalStorage [
+        a cot:DynamicContext ;  
+        cot:maxInclusive 12 ;  
+        cot:minInclusive 0 ;  
+        # qu:unit qu:item genérico?
+    ] ;
+    cot:physicalStorage [
+        a cot:DynamicContext ;
+        cot:maxInclusive 725.75 ;
+        cot:minInclusive 0.0 ;
+        qu:unit qu:kilogram ;
+    ];
+    cot:controlInterface [
+        a cot:MobileAppInterface ;
+        cot:name "PantryOn" ; 
+        cot:mobileAppOS [
+            a cot:Android ;
+        ] ;
+        cot:mobileAppOS [
+            a cot:iOS ;
+        ] ;
+    ] ;
+    cot:shape [
+        a cot:RectBox ;
+        cot:width  [ cot:value 30.48 ; qu:unit unit:centimetre ] ;
+        cot:height [ cot:value 71.12 ; qu:unit unit:centimetre ] ;
+        cot:length [ cot:value 6.35 ; qu:unit unit:centimetre ] ;
+    ] ;
+    cot:powerSupply [
+        a cot:AcPowerSupply ;
+        cot:cableLength [ cot:value 147.32 ; qu:unit unit:centimetre ] ;
+    ] ;
+    # pulei forro (liner) removível
+    .
 
-    # feature necessariamente está ligada a sensores?
+:LGStyler rdf:type :SmartCabinets ;
+    rdfs:seeAlso <https://www.lg.com/my/lg-styler/lg-s3mfc> ;
+    cot:shape [
+        a cot:RectBox ;
+        cot:width  [ cot:value 44.5 ; qu:unit unit:centimetre ] ;
+        cot:height [ cot:value 185.0 ; qu:unit unit:centimetre ] ;
+        cot:length [ cot:value 58.5 ; qu:unit unit:centimetre ] ;
+    ] ;
+    cot:weight [ cot:value 78.0 ; qu:unit unit:kilogram ] ;
+    cot:controlInterface [ a cot:IntegratedControlInterface ] ;
+    cot:capacity[
+        a cot:DynamicContext ;
+        cot:maxInclusive 5.2 ;
+        cot:minInclusive 0.0 ;
+        qu:unit qu:kilogram ;
+    ] ; 
+    cot:feature [
+        cot:hasSpec cot:OdorRemover ;
+        cot:hasSpec cot:SteamVBARemover ;
+    ] ;
+    # pulei: capacidade em unidades de roupa
+    .
 
+:SenseAware rdf:type :SmartCabinets ;
+    rdfs:seeAlso <https://www.fedex.com/en-us/senseaware.html> ;
+    cot:shape [
+        a cot:RectBox ;
+        cot:width  [ cot:value 11.5 ; qu:unit unit:centimetre ] ;
+        cot:height [ cot:value 11.5 ; qu:unit unit:centimetre ] ;
+        cot:length [ cot:value 1.9 ; qu:unit unit:centimetre ] ;
+    ] ;
+    cot:weight [ cot:value 202.0 ; qu:unit unit:gram ] ;
+    # possui sensores de 
+    #  Localização
+    #  Temperatura
+    #  Pressão
+    #  Impacto
+    #  umidade
+    cot:connectivity [ 
+        a cot:WiFiConnectivity ;
+        cot:hasSpec cot:AirplaneMode ; 
+    ] ;
+    cot:connectivity [ a cot:BLEConnectivity ] ;
+    cot:powerSupply [
+        a cot:BatterySupply ;
+        cot:value 1 ;
+        cot:hasSpec cot:Rechargeable ;
+        cot:energyStorage [ cot:value 3000.0 ; qu:unit unit:milliampere ] ;
+        qu:unit unit:batteryCellLi-Ion ;
+    ] ;
+    cot:powerSupply [ a cot:UsbCSupply ] ;
+    .
+
+# colocar os sensores que o objeto possui? sim, como feature mesmo? 
+# ou criar uma nova classe para definir os que tem?
+ 
+# faz sentido ser subpropriedade de feature
+# ou melhor o inverso? feature ser subpropriedade dos sensores
+ 
+# sensores diferentes fazem as mesmas coisas ou
+# features diferentes pro mesmo sensor?
+# feature necessariamente está ligada a sensores?
+
+# criar classe pra descrever funçoes programáveis?
+# há objetos que possui programas como maquina de lavar
+# e guarda roupa inteligente
 
