@@ -268,315 +268,334 @@ PREFIX cot: <http://nesped.caf.ufv.br/nomedataset/contexts>
 
 :SoilPhosphorusSensor a owl:Class ;
     rdfs:subClassOf :SmartObject ;
-    .
+    app:usedFor app:EnvironmentalMonitoringControl , app:DisasterManagement .
+
 :SoilPotassiumSensor a owl:Class ;
     rdfs:subClassOf :SmartObject ;
-    .
+    app:usedFor app:EnvironmentalMonitoringControl , app:DisasterManagement .
+
 :SoilCarbonDioxideSensor a owl:Class ;
     rdfs:subClassOf :SmartObject ;
-    .
+    app:usedFor app:EnvironmentalMonitoringControl , app:DisasterManagement .
+
 :SoilPHSensor a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:EnvironmentalMonitoringControl , app:DisasterManagement .
 
 :SoilMoistureSensor a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:EnvironmentalMonitoringControl , app:SmartIrrigation .
 
 :SoilElectricalConductivitySensor a owl:Class ;
     rdfs:subClassOf :SmartObject ;
-    .
+    app:usedFor app:EnvironmentalMonitoringControl , app:DisasterManagement .
+
 :SoilSalinitySensor a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:EnvironmentalMonitoringControl , app:DisasterManagement .
 
 :InfraredGasSensor a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:EnvironmentalMonitoringControl , app:DisasterManagement .
 
 :ElectrochemicalGasSensor a owl:Class ;
     rdfs:subClassOf :SmartObject ;
-    .
+    app:usedFor app:EnvironmentalMonitoringControl , app:DisasterManagement .
+
 :SemiconductorGasSensor a owl:Class ;
     rdfs:subClassOf :SmartObject ;
-    .
+    app:usedFor app:EnvironmentalMonitoringControl , app:DisasterManagement .
+
 :CatalyticGasSensor a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:EnvironmentalMonitoringControl , app:DisasterManagement .
 
 :GasLeakSensor a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:EnvironmentalMonitoringControl , app:DisasterManagement .
 
 :SmokeSensors a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:EnvironmentalMonitoringControl , app:DisasterManagement .
 
 :BiometricSensor a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:SmartSecurity .
 
 :IntracorporealTemperatureSensor a owl:Class ;
     rdfs:subClassOf :SmartObject ;
-    .
+    app:usedFor app:MonitoringVitalSigns, app:PreventiveHealthMeasures .
+
 :GPSSensor a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:SmartMobility .
 
 :AmbientTemperatureSensor a owl:Class ;
     rdfs:subClassOf :SmartObject ;
-    .
+    app:usedFor app:SmartTemperatureHumidity, app:EnvironmentalMonitoringControl, app:DisasterManagement .
+
 :LightSensor a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:SmartLighting .
 
 :InfraredSensor a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:SmartSecurity .
 
 :ContactSensor a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:SmartSecurity, app:SmartHome, app:SmartIndustry .
 
 :ProximitySensor a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:SmartMobility, app:SmartSecurity, app:SmartParking .
 
 :SoundPressureLevelSensor a owl:Class ;
     rdfs:subClassOf :SmartObject ;
-    .
+    app:usedFor app:SmartSecurity, app:EmergencyAlarmSystem, app:EnvironmentalMonitoringControl .
+
 :PrecipitationSensor a owl:Class ;
     rdfs:subClassOf :SmartObject ;
-    .
+    app:usedFor app:SmartIrrigation, app:EnvironmentalMonitoringControl, app:DisasterManagement .
+
 :FlameSensor a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:SmartSecurity, app:EmergencyAlarmSystem, app:DisasterManagement .
 
 :PiezoelectricSensor a owl:Class ;
     rdfs:subClassOf :SmartObject ;
-    .
+    app:usedFor app:FallDetection, app:MonitoringVitalSigns, app:AssistiveTechnology .
+
 :PiezoresistivePressureSensor a owl:Class ;
     rdfs:subClassOf :SmartObject ;
-    .
+    app:usedFor app:MonitoringVitalSigns, app:SmartMobility, app:AssistiveTechnology .
+
 :CurrentSensor a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:EnergyManagement, app:SmartLighting .
 
 :VoltageSensor a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:EnergyManagement .
 
 :SolarRadiationSensor a owl:Class ;
     rdfs:subClassOf :SmartObject ;
-    .
+    app:usedFor app:EnvironmentalMonitoringControl, app:EnergyManagement .
+
 :FloodSensors a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:SmartCity, app:SmartFarm, app:DisasterManagement .
 
 :MotionSensor a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:SmartSecurity, app:SmartMobility .
 
 :MechanicalPartsIntegritySensors a owl:Class ;
     rdfs:subClassOf :SmartObject ;
     .
+
 :WaterFlowSensor a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:WaterManagement, app:EnvironmentalMonitoringControl, app:DisasterManagement .
 
 :SmartAccelerometer a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:FallDetection, app:SmartMobility, app:SupplyChainManagement .
 
 :SmartMicrophones a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:VoiceControl, app:SmartSecurity, app:EmergencyAlarmSystem .
 
 :VibrationSensor a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:SmartSecurity, app:SupplyChainManagement, app:DisasterManagement .
 
 :SmartSonar a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:EnvironmentalMonitoringControl .
 
 :SmartFloor a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:FallDetection .
 
 :SmartParkingSpaces a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:EnvironmentalMonitoringControl .
 
 :SmartSpeedBumps a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:SmartMobility, app:EnvironmentalMonitoringControl .
 
 :SmartTrafficLights a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
-
-:SmartTrafficLights a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:SmartMobility, app:EnvironmentalMonitoringControl .
 
 :SmartElectricFence a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:SmartSecurity .
 
 :SmartFencesNonElectric a owl:Class ;
     rdfs:subClassOf :SmartObject ;
-    .
+    app:usedFor app:EnvironmentalMonitoringControl .
+
 :PerimeterSensor a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:SmartSecurity .
 
 :ComputerPCDesktopServers a owl:Class ;
     rdfs:subClassOf :SmartObject ;
-    .
+    app:usedFor app:CampusTalk, app:SmartBedroom .
+
 :SmartTVs a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:SmartBedroom .
 
 :SetTopBoxes a owl:Class ;
     rdfs:subClassOf :SmartObject 
     .
 
 :MediaPlayers a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:SmartBedroom .
 
 :SmartBoards a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:CampusTalk .
 
 :SmartTelemetry a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:SmartMobility .
 
 :SelfServiceKiosk a owl:Class ;
     rdfs:subClassOf :SmartObject 
     .
 
 :SmartProjectors a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:CampusTalk .
 
 :SmartWhiteboards a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:CampusTalk .
 
 :InformationKiosks a owl:Class ;
     rdfs:subClassOf :SmartObject 
     .
 
 :SmartCars a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:SmartMobility .
 
 :SmartThreeWheelScooter a owl:Class ;
     rdfs:subClassOf :SmartObject ;
-    .
+    app:usedFor app:SmartMobility .
+
 :SmartMotorcycle a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:SmartMobility .
 
 :SmartHarvestingRobot a owl:Class ;
     rdfs:subClassOf :SmartObject ;
-    .
+    app:usedFor app:SmartGreenhouse, app:PlantMonitoring .
+
 :RoboticArm a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:AssistiveTechnology .
 
 :SmartWeedingRobot a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:SmartGreenhouse, app:PlantMonitoring .
 
 :SmartSwitches a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:EnergyManagement, app:SmartLighting .
 
 :SmartEnergyMeterCircuitBreaker a owl:Class ;
     rdfs:subClassOf :SmartObject ;
-    .
+    app:usedFor app:EnergyManagement, app:SmartSecurity .
+
 :SmartWalkers a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:AssistiveTechnology .
 
 :SmartCommunicationBoard a owl:Class ;
     rdfs:subClassOf :SmartObject ;
-    .
+    app:usedFor app:AssistiveTechnology .
+
 :SmartVocalizer a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:AssistiveTechnology .
 
 :BrightSignSmartVocalizationGlove a owl:Class ;
     rdfs:subClassOf :SmartObject ;
-    .
+    app:usedFor app:AssistiveTechnology .
+
 :SmartDryer a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:SmartCleaning .
 
 :SmartWashingMachine a owl:Class ;
     rdfs:subClassOf :SmartObject ;
-    .
+    app:usedFor app:SmartCleaning .
+    
 :SmartPillBlisterPack a owl:Class ;
     rdfs:subClassOf :SmartObject ;
-    .
+    app:usedFor app:MedicationAdherence .
+
 :SmartPillOrganizer a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:PreventiveHealthMeasures, app:MedicationAdherence .
 
 :SmartLightBulbs a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:EnergyManagement, app:SmartLighting .
 
 :SmartSatellite a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:SmartMobility, app:EnvironmentalMonitoringControl, app:DisasterManagement .
 
 :RFID a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:InventoryManagement, app:SupplyChainManagement.
 
 :Drones a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:SmartSecurity, app:AnimalMonitoring, app:PlantMonitoring.
 
 :Smart3DPrinter a owl:Class ;
-    rdfs:subClassOf :SmartObject 
+    rdfs:subClassOf :SmartObject ;
     .
 
 :SmartMat a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:PreventiveHealthMeasures, app:AssistiveTechnology .
 
 :SmartSpeakers a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:VoiceControl, app:IndoorLocation .
 
 :SmartMirror a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:SmartBedroom, app:MentalCare, app:AssistiveTechnology .
 
 :SmartDoor a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:SmartSecurity .
 
 :SmartLock a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:SmartSecurity .
 
 :Cameras a owl:Class ;
-    rdfs:subClassOf :SmartObject 
-    .
+    rdfs:subClassOf :SmartObject ;
+    app:usedFor app:SmartSecurity, app:SmartSecurity, app:SmartParking .
 
 :IMedBoxSmartMedicalCase a owl:Class ;
     rdfs:subClassOf :SmartObject ;
-    .
+    app:usedFor app:MedicationAdherence, app:AssistiveTechnology, app:AgedCareMonitoring .
 
 :SmartCap a owl:Class ;
-    rdfs:subClassOf :SmartObject 
+    rdfs:subClassOf :SmartObject ;
     .
 
 # Instances of smart objects
