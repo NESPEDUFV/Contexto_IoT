@@ -14,22 +14,22 @@ PREFIX owl:  <http://www.w3.org/2002/07/owl#>
 
 
 
-:Context a owl:Class ;
+cot:Context a owl:Class ;
     rdfs:comment "Represents any context that can be associated to a smart object." ;
     .
 
-:hasContext a owl:ObjectProperty ;
+cot:hasContext a owl:ObjectProperty ;
     rdfs:domain cot:SmartObject ;
     rdfs:range cot:Context ;
     .
 
-:hasSpec a owl:ObjectProperty ;
+cot:hasSpec a owl:ObjectProperty ;
     rdfs:domain :Context ;
     rdfs:range :Context ;
     rdfs:comment "Indicates a further specification of a context." ;
     .
 
-:DynamicContext a owl:Class ;
+cot:DynamicContext a owl:Class ;
     rdfs:subClassOf :Context,
                     [ a owl:Restriction ;
                       owl:onProperty :hasSpec ;
@@ -38,371 +38,438 @@ PREFIX owl:  <http://www.w3.org/2002/07/owl#>
     rdfs:comment "Indicates a context whose current value can change over time, thus requiring a range of possible values to be specified." ;
     .
 
-:StaticContext a owl:Class ;
+cot:StaticContext a owl:Class ;
     rdfs:subClassOf :Context ;
     owl:intersectionOf ( :Context [ owl:complementOf :DynamicContext ] ) ;
     rdfs:comment "Indicates a context whose value does not change over time." ;
     .
 
-:value a owl:DatatypeProperty, owl:FunctionalProperty ;
+cot:value a owl:DatatypeProperty, owl:FunctionalProperty ;
     rdfs:domain :StaticContext ;
     .
 
-:minInclusive a owl:DatatypeProperty, owl:FunctionalProperty ;
+cot:minInclusive a owl:DatatypeProperty, owl:FunctionalProperty ;
     rdfs:domain :Context ;
     .
 
-:maxInclusive a owl:DatatypeProperty, owl:FunctionalProperty ;
+cot:maxInclusive a owl:DatatypeProperty, owl:FunctionalProperty ;
     rdfs:domain :Context ;
     .
 
-:Shape a owl:Class ;
+cot:Shape a owl:Class ;
     rdfs:subClassOf :Context ;
     rdfs:comment "Represents the approximate shape and size of an object." ;
     .
 
-:shape a owl:ObjectProperty ;
+cot:shape a owl:ObjectProperty ;
     rdfs:subPropertyOf :hasContext ;
     rdfs:range :Shape ;
     .
 
-:RectBox a owl:Class ;
+cot:RectBox a owl:Class ;
     rdfs:subClassOf :Shape ;
     rdfs:comment "Represents the shape of an object as a rectangular box." ;
     owl:hasKey ( :width :height :length ) ;
     .
 
-:CylindShell a owl:Class ; # rever
+cot:CylindShell a owl:Class ; # rever
     rdfs:subClassOf :Shape ;
     rdfs:comment "Represents the shape of an object as a cylindrical shell." ;
     owl:hasKey ( :width :thickness ) ;
     .
 
-:thickness a owl:ObjectProperty, owl:FunctionalProperty ; # rever
+cot:thickness a owl:ObjectProperty, owl:FunctionalProperty ; # rever
     rdfs:subPropertyOf :hasSpec ;
     rdfs:domain :Shape ;
     .
 
-:width a owl:ObjectProperty, owl:FunctionalProperty ;
+cot:width a owl:ObjectProperty, owl:FunctionalProperty ;
     rdfs:subPropertyOf :hasSpec ;
     rdfs:domain :Shape ;
     .
 
-:height a owl:ObjectProperty, owl:FunctionalProperty ;
+cot:height a owl:ObjectProperty, owl:FunctionalProperty ;
     rdfs:subPropertyOf :hasSpec ;
     rdfs:domain :Shape ;
     .
 
-:length a owl:ObjectProperty, owl:FunctionalProperty ;
+cot:length a owl:ObjectProperty, owl:FunctionalProperty ;
     rdfs:subPropertyOf :hasSpec ;
     rdfs:domain :Shape ;
     .
 
-:Storage a owl:Class ;
+cot:Storage a owl:Class ;
     rdfs:subClassOf :Context ;
     rdfs:comment "Represents the capacity of an object to store information or other things." ;
     .
 
-:PhysicalStorage a owl:Class ;
+cot:PhysicalStorage a owl:Class ;
     rdfs:subClassOf :Storage ;
     rdfs:comment "Represents the capacity of an object to physically store other things inside itself." ;
     .
 
-:physicalStorage a owl:ObjectProperty ;
+cot:physicalStorage a owl:ObjectProperty ;
     rdfs:subPropertyOf :hasContext ;
     rdfs:range :PhysicalStorage ;
     .
 
-:EnergyStorage a owl:Class ;
+cot:EnergyStorage a owl:Class ;
     rdfs:subClassOf :Storage ;
     rdfs:comment "Represents the capacity of an object to store energy inside itself." ;
     .
 
-:energyStorage a owl:ObjectProperty ;
+cot:energyStorage a owl:ObjectProperty ;
     rdfs:subPropertyOf :hasContext ;
     rdfs:range :EnergyStorage ;
     .
 
 
-:DataStorage a owl:Class ;
+cot:DataStorage a owl:Class ;
     rdfs:subClassOf :Storage ;
     rdfs:comment "Represents the capacity of an object to store digital information." ;
     .
 
-:AudioRecordStorage a owl:Class ;
+cot:AudioRecordStorage a owl:Class ;
     rdfs:subClassOf :DataStorage ;
     rdfs:comment "Represents the capacity of an object to store audio recordings." ;
     .
 
-:audioRecordStorage a owl:ObjectProperty ;
+cot:audioRecordStorage a owl:ObjectProperty ;
     rdfs:subPropertyOf :hasContext ;
     rdfs:range :Context ;
     .
 
-:PowerSupply a owl:Class ;
+cot:PowerSupply a owl:Class ;
     rdfs:subClassOf :Context ;
     .
 
-:powerSupply a owl:ObjectProperty ;
+cot:powerSupply a owl:ObjectProperty ;
     rdfs:subPropertyOf :hasContext ;
     rdfs:range :PowerSupply ;
     .
 
-:UsbCSupply a owl:Class ;
+cot:UsbCSupply a owl:Class ;
     rdfs:subClassOf :PowerSupply ;
     .
 
-:BatterySupply a owl:Class ;
+cot:MicroUsbSuply a owl:Class ;
     rdfs:subClassOf :PowerSupply ;
     .
 
-:Rechargeable a owl:Class ;
+cot:BatterySupply a owl:Class ;
+    rdfs:subClassOf :PowerSupply ;
+    .
+
+cot:Rechargeable a owl:Class ;
     rdfs:domain :BatterySupply ;
     .
 
-:Replaceable a owl:Class ;
+cot:Replaceable a owl:Class ;
     rdfs:domain :BatterySupply ;
     .
 
-:NotReplaceable a owl:Class ;
+cot:NotReplaceable a owl:Class ;
     rdfs:subPropertyOf :hasSpec ;
     rdfs:domain :BatterySupply ;
     .
 
-:Sealing a owl:Class ;
+cot:Sealing a owl:Class ;
     rdfs:subPropertyOf :hasSpec ;
     rdfs:domain :Context ;
     .
 
-:AcPowerSupply a owl:Class ;
+cot:AcPowerSupply a owl:Class ;
     rdfs:comment "An alternated current (AC) power supply." ;
     rdfs:subClassOf :PowerSupply 
     .
 
-:Voltage a owl:Class ;
+cot:Voltage a owl:Class ;
     rdfs:subClassOf :Context ;
     .
 
-:cableLength a owl:ObjectProperty, owl:FunctionalProperty ;
+cot:cableLength a owl:ObjectProperty, owl:FunctionalProperty ;
     rdfs:subPropertyOf :hasSpec ;
     rdfs:domain :AcPowerSupply ;
     rdfs:range :length ;
     .
 
-:acInputVoltage a owl:ObjectProperty, owl:FunctionalProperty ;
+cot:acInputVoltage a owl:ObjectProperty, owl:FunctionalProperty ;
     rdfs:subPropertyOf :hasSpec ;
     rdfs:domain :AcPowerSupply ;
     rdfs:range :Voltage ;
     .
 
-:acOutputVoltage a owl:ObjectProperty, owl:FunctionalProperty ;
+cot:acOutputVoltage a owl:ObjectProperty, owl:FunctionalProperty ;
     rdfs:subPropertyOf :hasSpec ;
     rdfs:domain :AcPowerSupply ;
     rdfs:range :Voltage ;
     .
 
-:NetworkConnectivity a owl:Class ;
+cot:NetworkConnectivity a owl:Class ;
     rdfs:subClassOf :Context ;
     .
 
-:connectivity a owl:ObjectProperty ;
+cot:connectivity a owl:ObjectProperty ;
     rdfs:subPropertyOf :hasContext ;
     rdfs:range :NetworkConnectivity ;
     .
 
-:WiFiConnectivity a owl:Class ;
+cot:WiFiConnectivity a owl:Class ;
     rdfs:subClassOf :NetworkConnectivity ;
     .
 
-:wifiFrequency a :ObjectProperty, :FunctionalProperty ;
+cot:wifiFrequency a :ObjectProperty, :FunctionalProperty ;
     rdfs:subClassOf :hasSpec ;
     rdfs:domain :WiFiConnectivity ;
     .
 
-:BluetoothConnectivity a owl:Class ;
+cot:BluetoothConnectivity a owl:Class ;
     rdfs:subClassOf :NetworkConnectivity ;
     .
 
-:BLEConnectivity a owl:Class ;
+cot:BLEConnectivity a owl:Class ;
     rdfs:comment "Bluetooth Low Energy" ;
     rdfs:subClassOf :BluetoothConnectivity;
     .
 
-:EMF-Safe a owl:Class ;
+cot:EMF-Safe a owl:Class ;
     rdfs:domain :BluetoothLowEnergy ;
     rdfs:comment "Electromagnetic radiation (EMF) safety." ;
     .
 
-:AirplaneMode a owl:Class ;
+cot:AirplaneMode a owl:Class ;
     rdfs:subClassOf :hasSpec ;
     rdfs:domain :NetworkConnectivity ;
     .
 
-:ControlInterface a owl:Class ;
+cot:ControlInterface a owl:Class ;
     rdfs:comment "An interface through which a smart object can be controlled or interacted with." ;
     rdfs:subClassOf :Context ;
     .
 
-:IntegratedControlInterface a owl:Class ;
+cot:IntegratedControlInterface a owl:Class ;
     rdfs:comment "A control interface integrated into the object itself." ;
     rdfs:subClassOf :ControlInterface ;
     .
 
-:controlInterface a owl:ObjectProperty ;
+cot:controlInterface a owl:ObjectProperty ;
     rdfs:subPropertyOf :hasContext ;
     rdfs:range :ControlInterface ;
     .
 
-:MobileAppInterface a owl:Class ;
+cot:MobileAppInterface a owl:Class ;
     rdfs:comment "A control interface mediated through a mobile application." ;
     rdfs:subClassOf :ControlInterface ;
     .
 
-:mobileAppOS a owl:ObjectProperty ;
+cot:SmartTvAppInterface a owl:Class ;
+    rdfs:comment "A control interface mediated through a smart tv application." ;
+    rdfs:subClassOf :ControlInterface ;
+    .
+
+cot:DesktopAppInterface a owl:Class ;
+    rdfs:comment "A control interface mediated through a desktop application." ;
+    rdfs:subClassOf :ControlInterface ;
+    .
+
+cot:WebAppInterface a owl:Class ;
+    rdfs:comment "A control interface mediated through a web application." ;
+    rdfs:subClassOf :ControlInterface ;
+    .
+
+cot:OperatingSystem a owl:Class ;
+     rdfs:subClassOf cot:Context 
+     .
+     
+cot:MobileOs a owl:Class ;
+    rdfs:comment "An operating system supported by a mobile application." ;
+    rdfs:subClassOf cot:OperatingSystem 
+    .
+
+cot:DesktopOs a owl:Class ;
+    rdfs:subClassOf cot:OperatingSystem 
+    .
+
+cot:SmartTvOs a owl:Class ;
+    rdfs:subClassOf cot:OperatingSystem 
+    .
+
+cot:desktopOs a owl:Class ;
+    rdfs:subPropertyOf :hasSpec ;
+    rdfs:domain :DesktopAppInterface ;
+    rdfs:range :DesktopOs ;
+    .
+
+cot:smartTvOs a owl:Class ;
+    rdfs:subPropertyOf :hasSpec ;
+    rdfs:domain :SmartTvAppInterface ;
+    rdfs:range :SmartTvOs ;
+    .
+
+cot:mobileOS a owl:ObjectProperty ;
     rdfs:subPropertyOf :hasSpec ;
     rdfs:domain :MobileAppInterface ;
-    rdfs:range :MobileAppOS ;
+    rdfs:range :MobileOs ;
     .
 
-:MobileAppOS a owl:Class ;
-    rdfs:comment "An operating system supported by a mobile application." ;
-    rdfs:subClassOf :Context ;
+cot:WebOs a owl:Class ;
+    rdfs:subClassOf cot:SmartTvOs 
     .
 
-:Android a owl:Class ;
-    rdfs:subClassOf :MobileAppOS ;
+cot:Android a owl:Class ;
+    rdfs:subClassOf :MobileOs ;
     .
 
-:iOS a owl:Class ;
-    rdfs:subClassOf :MobileAppOS ;
+cot:iOS a owl:Class ;
+    rdfs:subClassOf :MobileOs ;
     .
 
-:Version a owl:Class ;
+cot:Version a owl:Class ;
     rdfs:comment: "The version of something" ;
     rdfs:subClassOf :Context ;
     .
 
-:version a owl:ObjectProperty ;
+cot:version a owl:ObjectProperty ;
     rdfs:subPropertyOf :hasContext ;
     rdfs:range :Version ;
     .
 
-:LanguageAvailability a owl:Class ;
+cot:LanguageAvailability a owl:Class ;
     rdfs:subClassOf :Context ;
     .
 
-:languageAvailability a owl:ObjectProperty ;
+cot:languageAvailability a owl:ObjectProperty ;
     rdfs:subPropertyOf :hasContext ;
     rdfs:range :LanguageAvailability ;
     .
 
-:Name a owl:Class ;
+cot:Name a owl:Class ;
     rdfs:comment "Word or expression that designates something to someone" ;
     rdfs:subClassOf :Context ;
     .
 
-:name a owl:ObjectProperty ;
+cot:name a owl:ObjectProperty ;
     rdfs:subPropertyOf :hasContext ;
     rdfs:range :Name ;
     .
 
-:Feature a owl:Class ;
+cot:Feature a owl:Class ;
     rdfs:comment "A feature that a context-aware smart object has that can be used in a system." ;
     rdfs:subClassOf :Context ;
     .
 
-:feature a owl:ObjectProperty ;
+cot:feature a owl:ObjectProperty ;
     rdfs:subPropertyOf :hasContext ;
     rdfs:range :Feature ;
     .
 
-:BodyTempMonitorFeat a owl:Class ;
-    rdfs:comment "A feature of a body temperature monitor/sensor" ;
+cot:Temperature a owl:Class ;
     rdfs:subClassOf :Feature ;
     .
 
-:BloodOxygMonitorFeat a owl:Class ;
+cot:PressureMonFeat a owl:Class ;
+    rdfs:comment "An ambient pressure monitor" ;
+    rdfs:subClassOf :Feature ;
+    .
+
+cot:EnvHumidMonFeat a owl:Class ;
+    rdfs:comment "An ambient humidity monitor" ;
+    rdfs:subClassOf :Feature ;
+    .
+
+
+cot:RoomTempMonFeat a owl:Class ;
+    rdfs:comment "A feature of a ambient temperature monitor/sensor" ;
+    rdfs:subClassOf :Temperature ;    
+    .
+
+cot:BodyTempMonFeat a owl:Class ;
+    rdfs:comment "A feature of a body temperature monitor/sensor" ;
+    rdfs:subClassOf :Temperature ;
+    .
+
+cot:BloodOxygMonFeat a owl:Class ;
     rdfs:comment "A feature of a blood oxygen monitor/sensor" ;
     rdfs:subClassOf :Feature ;
     .
 
-:HeartRateMonitorFeat a owl:Class ;
+cot:HeartRateMonFeat a owl:Class ;
     rdfs:comment "A feature of a heart rate monitor/sensor" ;
     rdfs:subClassOf :Feature ;
     .
 
-:MotionMonitorFeat a owl:Class ;
+cot:MotionMonFeat a owl:Class ;
     rdfs:comment "A feature of a motion monitor/sensor" ;
     rdfs:subClassOf :Feature ;
     .
 
-:SteamVBARemover a owl:Class ;
+cot:SteamVBARemoverFeat a owl:Class ;
     rdfs:comment "function that removes viruses, bacteria, and allergens using steam" ;
     rdfs:subClassOf :Feature ;
     . 
 
-:OdorRemover a owl:Class ;
+cot:OdorRemoverFeat a owl:Class ;
     rdfs:comment "Function that removes odor from clothes" ;
     rdfs:subClassOf :Feature ;
     .
 
-:DehumidifyFeat a owl:Class ;
+cot:DehumidifyFeat a owl:Class ;
     rdfs:comment "Removes the indoor humidity" ;
     rdfs:subClassOf :Feature ;
     .
 
-:FeedControl a owl:Class ;
+cot:FeedControl a owl:Class ;
     rdfs:comment "A complex context about feeding control" ;
     rdfs:subClassOf :Context ;
     .
 
-:feedControl a owl:ObjectProperty ;
+cot:feedControl a owl:ObjectProperty ;
     rdfs:subPropertyOf :hasContext ;
     rdfs:range :FeedControl ;
     .
 
-:NumberMeals a owl:Class ;
+cot:NumberMeals a owl:Class ;
     rdfs:comment "The number of meals per day" ;
     rdfs:subClassOf :Context ;
     .
 
-:numberMeals a owl:ObjectProperty ;
+cot:numberMeals a owl:ObjectProperty ;
     rdfs:subPropertyOf :hasContext ;
     rdfs:range :NumberMeals ;
     .
 
-:ServingSize a owl:Class ;
+cot:ServingSize a owl:Class ;
     rdfs:comment "The serving size of a portion" ;
     rdfs:subClassOf :Context ;
     .
 
-:servingSize a owl:ObjectProperty ;
+cot:servingSize a owl:ObjectProperty ;
     rdfs:subPropertyOf :hasContext ;
     rdfs:range :ServingSize ;
     .
 
-:ServingsPerMeal a owl:Class ;
+cot:ServingsPerMeal a owl:Class ;
     rdfs:comment "The amount of servings per meal" ;
     rdfs:subClassOf :Context ;
     .
 
-:servingsPerMeal a owl:ObjectProperty ;
+cot:servingsPerMeal a owl:ObjectProperty ;
     rdfs:subPropertyOf :hasContext ;
     rdfs:range :ServingsPerMeal ;
     .
 
-:Location a owl:Class ;
+cot:Location a owl:Class ;
     rdfs:comment "The location of the smart object" ;
     rdfs:subClassOf :Context ;
     owl:hasKey ( :latitude :longitude ) ;
     .
 
-:latitude a owl:ObjectProperty, owl:FunctionalProperty ;
+cot:latitude a owl:ObjectProperty, owl:FunctionalProperty ;
     rdfs:subPropertyOf :hasSpec ;
     rdfs:domain :Location ;
     .
 
-:longitude a owl:ObjectProperty, owl:FunctionalProperty ;
+cot:longitude a owl:ObjectProperty, owl:FunctionalProperty ;
     rdfs:subPropertyOf :hasSpec ;
     rdfs:domain :Location ;
     .

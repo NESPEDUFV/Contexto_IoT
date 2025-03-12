@@ -594,13 +594,13 @@ PREFIX cot: <http://nesped.caf.ufv.br/nomedataset/contexts>
         cot:wifiFrequency [
             cot:value 2.4 ;
             qu:unit unit:gigahertz
-        ]
+        ] ;
     ] ;
     cot:controlInterface [
         a cot:MobileAppInterface ;
         cot:name "HGsmart" ;
-        cot:mobileAppOS [ a cot:Android ] ;
-        cot:mobileAppOS [ a cot:iOS ] ;
+        cot:mobileOs [ a cot:Android ] ;
+        cot:mobileOs [ a cot:iOS ] ;
     ] ;
     cot:feedControl [
         cot:numberMeals 6 ;
@@ -612,7 +612,7 @@ PREFIX cot: <http://nesped.caf.ufv.br/nomedataset/contexts>
             qu:unit qu:servingsPerMeal #??
         ] ;
     ] ;
-    cot:hasSpec cot:Sealing ; 
+    cot:hasSpec [ a cot:Sealing ; ] ; 
     cot:audioRecordStorage [
         a cot:DynamicContext ;
         cot:maxInclusive 10.0 ;
@@ -648,11 +648,11 @@ PREFIX cot: <http://nesped.caf.ufv.br/nomedataset/contexts>
     cot:controlInterface [
         a cot:MobileAppInterface ;
         cot:name "B-hyve" ;
-        cot:mobileAppOS [
+        cot:mobileOs [
             a cot:Android ;
             cot:version [ cot:minInclusive "5.0" ] ;
         ] ;
-        cot:mobileAppOS [
+        cot:mobileOs [
             a cot:iOS ;
             cot:version [ cot:minInclusive "13.5" ] ;
         ] ;
@@ -671,8 +671,8 @@ PREFIX cot: <http://nesped.caf.ufv.br/nomedataset/contexts>
     rdfs:seeAlso <https://ouraring.com/product/rings> ;
     cot:shape [
         a cot:CylindShell;
-        cot:width [ cot:value 7.9 ; qu:unit unit:milimeter ] ;
-        cot:thickness [ cot:value 2.55 ; qu:unit unit:milimeter ] ;
+        cot:width [ cot:value 7.9 ; qu:unit unit:millimetre ] ;
+        cot:thickness [ cot:value 2.55 ; qu:unit unit:millimetre ] ;
     ] ;
     cot:connectivity [
         a cot:BLEConnectivity ;
@@ -689,19 +689,19 @@ PREFIX cot: <http://nesped.caf.ufv.br/nomedataset/contexts>
         qu:unit unit:batteryCellLiPO
     ];
     cot:feature [
-        cot:hasSpec cot:BodyTempMonitorFeat ;
-        cot:hasSpec cot:BloodOxygMonitorFeat ;
-        cot:hasSpec cot:HeartRateMonitorFeat ;
-        cot:hasSpec cot:MotionMonitorFeat ;
+        cot:hasSpec cot:BodyTempMonFeat ;
+        cot:hasSpec cot:BloodOxygMonFeat ;
+        cot:hasSpec cot:HeartRateMonFeat ;
+        cot:hasSpec cot:MotionMonFeat ;
     ] ;
-    .
-
+    .  
+    
 :UltrahumanRingAIR rdf:type :SmartRing ;
     rdfs:seeAlso <https://www.ultrahuman.com/ring/buy/global/> ;
     cot:shape [
         a cot:CylindShell;
-        cot:width [ cot:value 8.1 ; qu:unit unit:milimeter ] ;
-        cot:thickness [ cot:value 2.45 ; qu:unit unit:milimeter ] ;
+        cot:width [ cot:value 8.1 ; qu:unit unit:millimetre ] ;
+        cot:thickness [ cot:value 2.45 ; qu:unit unit:millimetre ] ;
     ] ;
     cot:weight [ cot:value 2.4 ; qu:unit unit:gram ] ;
     cot:connectivity [
@@ -712,11 +712,11 @@ PREFIX cot: <http://nesped.caf.ufv.br/nomedataset/contexts>
     cot:controlInterface [
         a cot:MobileAppInterface ;
         cot:name "Ultrahuman" ; 
-        cot:mobileAppOS [
+        cot:mobileOs [
             a cot:Android ;
             cot:version [ cot:minInclusive "6.0" ] ;
         ] ;
-        cot:mobileAppOS [
+        cot:mobileOs [
             a cot:iOS ;
             cot:version [ cot:minInclusive "15" ] ;
         ] ;
@@ -730,10 +730,10 @@ PREFIX cot: <http://nesped.caf.ufv.br/nomedataset/contexts>
         qu:unit unit:batteryCellLiPO
     ] ;
     cot:feature [
-        cot:hasSpec cot:BodyTempMonitorFeat ;
-        cot:hasSpec cot:BloodOxygMonitorFeat ;
-        cot:hasSpec cot:HeartRateMonitorFeat ;
-        cot:hasSpec cot:MotionMonitorFeat ;
+        cot:hasSpec cot:BodyTempMonFeat ;
+        cot:hasSpec cot:BloodOxygMonFeat ;
+        cot:hasSpec cot:HeartRateMonFeat ;
+        cot:hasSpec cot:MotionMonFeat ;
     ] ;
     .
 
@@ -754,10 +754,10 @@ PREFIX cot: <http://nesped.caf.ufv.br/nomedataset/contexts>
     cot:controlInterface [
         a cot:MobileAppInterface ;
         cot:name "PantryOn" ; 
-        cot:mobileAppOS [
+        cot:mobileOs [
             a cot:Android ;
         ] ;
-        cot:mobileAppOS [
+        cot:mobileOs [
             a cot:iOS ;
         ] ;
     ] ;
@@ -784,6 +784,15 @@ PREFIX cot: <http://nesped.caf.ufv.br/nomedataset/contexts>
     ] ;
     cot:weight [ cot:value 78.0 ; qu:unit unit:kilogram ] ;
     cot:controlInterface [ a cot:IntegratedControlInterface ] ;
+    cot:controlInterface [ 
+        a cot:MobileAppInterface ;
+        cot:mobileOs [ a cot:Android ; ] ;
+        cot:mobileOs [ a cot:iOS ; ] ;
+    ] ;
+    cot:controlInterface [
+        a cot:SmartTvAppInterface ;
+        cot:smartTvOs [ a cot:WebOs ; ] ;
+    ] ;
     cot:capacity[
         a cot:DynamicContext ;
         cot:maxInclusive 5.2 ;
@@ -791,8 +800,8 @@ PREFIX cot: <http://nesped.caf.ufv.br/nomedataset/contexts>
         qu:unit qu:kilogram ;
     ] ; 
     cot:feature [
-        cot:hasSpec cot:OdorRemover ;
-        cot:hasSpec cot:SteamVBARemover ;
+        cot:hasSpec cot:OdorRemoverFeat ;
+        cot:hasSpec cot:SteamVBARemoverFeat ;
     ] ;
     # pulei: capacidade em unidades de roupa
     .
@@ -806,12 +815,7 @@ PREFIX cot: <http://nesped.caf.ufv.br/nomedataset/contexts>
         cot:length [ cot:value 1.9 ; qu:unit unit:centimetre ] ;
     ] ;
     cot:weight [ cot:value 202.0 ; qu:unit unit:gram ] ;
-    # possui sensores de 
-    #  Localização
-    #  Temperatura
-    #  Pressão
-    #  Impacto
-    #  umidade
+
     cot:connectivity [ 
         a cot:WiFiConnectivity ;
         cot:hasSpec cot:AirplaneMode ; 
@@ -825,7 +829,49 @@ PREFIX cot: <http://nesped.caf.ufv.br/nomedataset/contexts>
         qu:unit unit:batteryCellLi-Ion ;
     ] ;
     cot:powerSupply [ a cot:UsbCSupply ] ;
+    cot:hasContext [ a cot:Location ] ;
+    cot:feature [
+        cot:hasSpec cot:RoomTempMonFeat ;
+        cot:hasSpec cot:PressureMonFeat ;
+        cot:hasSpec cot:AmbientHumidityMon ;
+        cot:hasSpec cot:MotionMonFeat ;
+    ] ;
     .
+
+:InstantPotPro rdf:type :SmartCookware ;
+    rdfs:seeAlso <https://instantpot.com/products/instant-pot-pro-plus-6-quart-smart-multi-cooker> ;
+    cot:shape [
+        a cot:RectBox ;
+        cot:width  [ cot:value 11.5 ; qu:unit unit:centimetre ] ; # converter
+        cot:height [ cot:value 11.5 ; qu:unit unit:centimetre ] ;
+        cot:length [ cot:value 1.9 ; qu:unit unit:centimetre ] ;
+    ] ;
+    cot:weight [ cot:value 202.0 ; qu:unit unit:gram ] ;
+    cot:connectivity [ a cot:WiFiConnectivity ] ;
+    cot:controlInterface [
+        a cot:MobileAppInterface ;
+        cot:name "Instant Connect" ; 
+        cot:mobileOs [
+            a cot:Android ;
+        ] ;
+        cot:mobileOs [
+            a cot:iOS ;
+        ] ;
+    ] ;
+    cot:physicalStorage [
+        a cot:DynamicContext ;
+        cot:maxInclusive 6.0 ;
+        cot:minInclusive 0.0 ;
+        qu:unit qu:litre ;
+    ];
+    .
+
+# feature liberar vapor a distancia
+
+# feature que fala dos modos que a panela tempanela de pressão, 
+# elétrica, de arroz, vaporizador, frigideira,
+# iogurteira, aquecedor, sous vide, NutriBoost e panela de conserva
+
 
 # colocar os sensores que o objeto possui? sim, como feature mesmo? 
 # ou criar uma nova classe para definir os que tem?
