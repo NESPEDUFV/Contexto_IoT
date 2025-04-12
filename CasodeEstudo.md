@@ -276,7 +276,10 @@ TODO: pegar os contextos dos objetos
 41. Sensor de precipitação
     Aplicações [7, 17]
     Contextos []
-42. Televisão inteligente
+42. Tomada inteligente
+    Aplicações []
+    Contextos []
+43. Televisão inteligente
     Aplicações [15]
     Contextos []
 
