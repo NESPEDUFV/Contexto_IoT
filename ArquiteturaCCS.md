@@ -53,3 +53,11 @@ A priori vamos pensar em fazer tudo dentro do NS3
 Protocolo IoT: MQTT (para provedores de contexto), HTTP/REST (para consumidores de contexto).
 
 Será necessário implementar normalização dos dados por agora? (exemplo: temp, temperature, TEMP_C).
+
+## Escalabilidade
+
+Manter no local uma quantidade limitada do histórico de contexto, o restante pode ser enviado para nuvem (ex: 100 valores)
+
+## Descoberta de sensores
+
+Serviço chega, manda em broadcast que chegou objetos com a aplicação requisitam conexão?
