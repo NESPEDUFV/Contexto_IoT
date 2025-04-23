@@ -56,10 +56,8 @@ telas como **televisão inteligente**, se estavam ligados, desligam.
 ## Aplicações
 
 1. Detecção de quedas
-2. Controle de microprocessadores através de voz, aplicação mobile ou
-    aplicação web
-3. Cuidados com animais de estimação (batimentos cardiacos, alimentação
-    na hora correta, mensagens de emergêcia, camera)
+2. Controle de microprocessadores através de voz, aplicação mobile ou aplicação web
+3. Cuidados com animais de estimação (batimentos cardiacos, alimentação na hora correta, mensagens de emergêcia, camera)
 4. Gerenciamento de gasto de energia (monitoramento e redução de consumo)
 5. Gerenciamento de gasto de agua (monitoramento e redução de consumo)
 6. Sistema de segurança e privacidade inteligente (alarmes, autolock)
@@ -68,15 +66,15 @@ telas como **televisão inteligente**, se estavam ligados, desligam.
 9. Sistemas de cuidado com a saúde (batimentos cardiacos)
 10. Sistemas de controle de luz
 11. Controladores de temperatura e umidade
-12. Aplicações com RFID (abrir portão, liberar ração)
-13. Serviço de limpeza inteligente (robo aspirador,
-    fechar janelas se muito vento)
-14. Jardim inteligente (regar as plantas quando necessário)
-15. Locomoção inteligente (carro inteligente andando)
-16. Cocção inteligente (fogão inteligente)
-17. Gerenciamento de inventário
+12. Serviço de limpeza inteligente (robo aspirador, fechar janelas se muito vento)
+13. Jardim inteligente (regar as plantas quando necessário)
+14. Locomoção inteligente (carro inteligente andando)
+15. Cocção inteligente (fogão inteligente)
+16. Gerenciamento de inventário
 
 ## Contextos
+
+\* pegar do OD4CoT.
 
 1. Tamanho de tela [1080x720]
 2. Pixels de camera [13MP]
@@ -149,7 +147,7 @@ car height,  car fuel type
 profile, preferred walking distance, required parking facility
 features
 
-TODO: pegar os contextos dos objetos
+TODO: pegar os contextos dos objetos no OD4CoT
 
 ## Objetos
 
@@ -168,118 +166,119 @@ TODO: pegar os contextos dos objetos
 5. Cafeteira inteligente
     Aplicações [19]
     Contextos
-6. Cama inteligente
-    Aplicações [11]
-    Contextos
-7. Camisa inteligente
-    Aplicações [11]
-    Contextos
-8. Camera inteligente
+    <!-- 6. Cama inteligente 
+        Aplicações [11]
+        Contextos -->
+    <!-- 6. Camisa inteligente
+        Aplicações [11]
+        Contextos -->
+6. Camera inteligente
     Aplicações [1, 3, 5, 8, 9, 20]
     Contextos
-9. Chuveiro inteligente
+7. Chuveiro inteligente
     Aplicações [7]
     Contextos
-10. Computador inteligente
+8. Computador inteligente
     Aplicações [6, 15]
     Contextos
-11. Carro inteligente
+9. Carro inteligente
     Aplicações [18]
     Contextos
-12. Colar inteligente
+10. Colar inteligente
     Aplicações [1, 9, 11, 14]
     Contextos
-13. Coleira inteligente
+11. Coleira inteligente
     Aplicações [3, 9, 14]
     Contextos
-14. Comedouro inteligente
+12. Comedouro inteligente
     Aplicações [3]
     Contextos
-15. Cortinas inteligentes
+13. Cortinas inteligentes
     Aplicações [12]
     Contextos
-16. Embalagem inteligente
-    Aplicações [11, 19]
-    Contextos
-17. Escova inteligente
+    <!-- 14. Embalagem inteligente
+        Aplicações [11, 19]
+        Contextos -->
+14. Escova inteligente
     Aplicações [11]
     Contextos
-18. Espelho inteligente
+15. Espelho inteligente
     Aplicações [15]
     Contextos
-19. Fogão inteligente
+16. Fogão inteligente
     Aplicações [19, 6]
     Contextos
-20. Geladeira inteligente
+17. Geladeira inteligente
     Aplicações [20, 6]
     Contextos
-21. Gotejador inteligente
+18. Gotejador inteligente
     Aplicações [7, 17]
     Contextos
-22. Guarda-roupa inteligente
+19. Guarda-roupa inteligente
     Aplicações [15]
     Contextos
-23. Janelas inteligentes
+20. Janelas inteligentes
     Aplicações [12]
     Contextos
-24. Lampadas inteligentes
+21. Lampadas inteligentes
     Aplicações [6, 12]
     Contextos
-25. Lava-louças inteligente
+22. Lava-louças inteligente
     Aplicações [16]
     Contextos
-26. Panela inteligente
+23. Panela inteligente
     Aplicações [19]
     Contextos
-27. Piso inteligente
+24. Piso inteligente
     Aplicações [1, 9]
     Contextos
-28. Portas inteligentes
+25. Portas inteligentes
     Aplicações [8, 14]
     Contextos
-29. Relógio inteligente
+26. Relógio inteligente
     Aplicações [1, 11, 15]
     Contextos
-30. Robô aspirador de pó inteligente
+27. Robô aspirador de pó inteligente
     Aplicações [9, 16]
     Contextos []
-31. Sensor de umidade do solo
+    \* os próximos deixar junto se um sensor abordar
+28. Sensor de umidade do solo
     Aplicações [17]
     Contextos []
-32. Medidores de PH da agua
+    <!-- 31. Medidores de PH da agua
+        Aplicações [17]
+        Contextos [] -->
+29. Sensor de monóxido de carbono
     Aplicações [17]
     Contextos []
-33. Sensor de monóxido de carbono
+30. Sensor de nitrogênio do solo
     Aplicações [17]
     Contextos []
-34. Sensor de nitrogênio do solo
+31. Sensor de fósforo do solo
     Aplicações [17]
     Contextos []
-35. Sensor de fósforo do solo
+32. Sensor de potássio do solo
     Aplicações [17]
     Contextos []
-36. Sensor de potássio do solo
+33. Sensor de Ph do solo
     Aplicações [17]
     Contextos []
-37. Sensor de Ph do solo
+34. Sensor de dióxido de carbono do solo
     Aplicações [17]
     Contextos []
-38. Sensor de dióxido de carbono do solo
+35. Sensor de salinidade do solo
     Aplicações [17]
     Contextos []
-39. Sensor de salinidade do solo
-    Aplicações [17]
-    Contextos []
-40. Sensor de fumaça
+36. Sensor de fumaça
     Aplicações [5, 10]
     Contextos []
-41. Sensor de precipitação
+37. Sensor de precipitação
     Aplicações [7, 17]
     Contextos []
-42. Tomada inteligente
+38. Tomada inteligente
     Aplicações []
     Contextos []
-43. Televisão inteligente
+39. Televisão inteligente
     Aplicações [15]
     Contextos []
 
@@ -289,62 +288,58 @@ TODO: pegar os contextos dos objetos
 
 Legenda de cores: (posição [x;y])
 
-humano com: Anel inteligente, colar inteligente, relógio inteligente [anda aleatóriamente]
+humano com: Anel inteligente, colar inteligente, relógio inteligente [anda aleatóriamente]. 3
 
-Verde agua: Computador [sempre na posição 6;16]
+Verde agua: Computador [sempre na posição 6;16]. 1
 
-azul claro: espelho inteligente
+azul claro: espelho inteligente. 1
 
-azul escuro: televisão
+azul escuro: televisão sala e quarto. 2
 
-verde: echo Dot (alexa)
+verde: echo Dot (alexa) add na cozinha e na sala. 3
 
-branco: cameras
+branco: cameras. 6
 
-roxo: coleira inteligente (gato)
+roxo: coleira inteligente (gato). 1
 
-sofá [9; 13]
+Guarda roupa [8; 18]. 1
 
-cama [3; 18]
+armário da cozinha. 1
 
-Guarda roupa [8; 18]
+armario do banheiro. 1
 
-armário da cozinha
+fogão [19; 19]. 1
 
-armario do banheiro
+carro [6; 17]. 1
 
-fogão [19; 19]
+janelas inteligentes + cortinas inteligentes. 10
 
-carro [6; 17]
+Comedouro inteligente [18;16]. 1
 
-televisão
+Robo aspirador de pó inteligente [anda pela casa, sempre volta pra 2;14]. 1
 
-janelas inteligentes + cortinas inteligentes
+chuveiro inteligente [9 ;19]. 1
 
-Comedouro inteligente [18;16]
+piso inteligente [cada quadrado no interiror da casa]. 254
 
-Robo aspirador de pó inteligente [anda pela casa, sempre volta pra 2;14]
+Geladeira inteligente [14; 19]. 1
 
-chuveiro inteligente [9 ;19]
+Escova inteligente [no armário do banheiro]. 1
 
-piso inteligente [cada quadrado no interiror da casa]
+laranja: gotejador inteligente. 1
 
-Geladeira inteligente [14; 19]
+lampada inteligente: [todo comodo terá uma no centro dele]. 7
 
-Embalagens inteligentes [espalhados dentro da geladeira inteligente e armários inteligentes]
+panela inteligente: [uma no fogão e algumas no armário da cozinha]. 2
 
-Escova inteligente [no armário do banheiro]
+sensor de fumaça: [todo comodo terá uma no centro dele]. 7
 
-laranja: gotejador inteligente
+sensores de [33 a 41] em cada uma das plantas do lado de fora da casa. 1
 
-lampada inteligente: [todo comodo terá uma no centro dele]
+Sensor de precipitação [junto com o gotejador inteligente]. 1
 
-panela inteligente: [uma no fogão e algumas no armário da cozinha]
+Vermelho: máquina de lavar louça inteligente. 1
 
-sensor de fumaça: [todo comodo terá uma no centro dele]
+tomada inteligente: 4 na sala, 6 no quarto, 2 no banheiro, 5 na cozinha, 1 na garagem. 18
 
-sensores de [33 a 41] em cada uma das plantas do lado de fora da casa
-
-Sensor de precipitação [junto com o gotejador inteligente]
-
-Vermelho: máquina de lavar louça inteligente
+total de objetos na casa: 329 (75 sem piso)

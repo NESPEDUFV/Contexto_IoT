@@ -14,7 +14,7 @@
   - [Descoberta de sensores](#descoberta-de-sensores)
   - [Atualização dos contextos](#atualização-dos-contextos)
   - [Distribuição de contexto](#distribuição-de-contexto)
-
+  - [TODO](#todo)
 
 ## Requisitos mínimos
 
@@ -22,9 +22,9 @@
 
 - ~~segurança ignorada a priori~~
 
-- Deve possuir custo computacional e de memória aceitável (caso de uso isolado)
+- Deve possuir custo computacional e de memória aceitável (caso de uso isolado e precisa rodar no ns)
 
-- Deve ser fácil de usar tanto por consumidores, quando por provedores de contexto.
+- Deve ser fácil de usar tanto por consumidores, quando por provedores de contexto (abstraido).
 
 - ~~Manutenabilidade? (desejável, mas para um protótipo não)~~
 
@@ -46,37 +46,39 @@ O serviço deve conseguir fazer:
   - provedores enviam contexto para o servidor.
   - consumidores contatam o servidor para obter contexto de provedores.
 
-- **Servidor de aplicação**: núcleo de processamento, gerencia a troca de informações e os dados
+- **Servidor de aplicação**: núcleo de processamento, gerência a troca de informações e os dados
 
-- Servidor de dados? (como mapear? usar rdf? usar tabelas normais?)
+- **Servidor de dados**? (como mapear? usar rdf? usar tabelas normais?)
 
     usando RDF da pra usar fuseki-server. Pra se comunicar com ele podemos usar a API RESTful dele usando libcurl (#include <curl/curl.h>) em C++
 
-> seria um sub conceito de DaaS (Data as a Service)? (bom para usar de referencia no artigo)
+seria um sub conceito de DaaS (Data as a Service)? (bom para usar de referencia no artigo)
 
-.
+~~fazer tudo dentro do NS3 ou fazer uma aplicação fora que se comunica com ele?~~
+~~Fora do ns3: liberdade pra escolher linguagem (ex: python facilitaria, mas pioraria desempenho)~~
+~~dentro do ns3: tem q fazer em C++~~
 
-> fazer tudo dentro do NS3 ou fazer uma aplicação fora que se comunica com ele?
-> Fora do ns3: liberdade pra escolher linguagem (ex: python facilitaria, mas pioraria desempenho)
-> dentro do ns3: tem q fazer em C++
+> Vamos fazer tudo dentro do NS3
 
-A priori vamos pensar em fazer tudo dentro do NS3
+<https://github.com/drogonframework/drogon> -> C++17/20 based HTTP application framework
 
-> <https://github.com/drogonframework/drogon> -> C++17/20 based HTTP application framework
+> Vamos usar a abstração do ns
 
 Protocolo IoT: MQTT (para provedores de contexto enviar os dados), HTTP/REST (para consumidores de contexto receber os dados e fazer as requisições).
 
-Será necessário implementar normalização dos dados por agora? (exemplo: temp, temperature, TEMP_C).
+> a priori vamos tentar full mqtt
+
+Será necessário implementar normalização dos dados por agora? (exemplo: temp, temperature, TEMP_C). não.
 
 ## Escalabilidade
 
-Manter no local uma quantidade limitada do histórico de contexto, o restante pode ser enviado para uma "nuvem" (ex: 100 valores históricos de buffer, o restante em nuvem)
+~~Manter no local uma quantidade limitada do histórico de contexto, o restante pode ser enviado para uma "nuvem" (ex: 100 valores históricos de buffer, o restante em nuvem)~~
 
 ## Descoberta de sensores
 
-- Serviço chega, manda em broadcast que chegou, objetos com a aplicação requisitam conexão? (simplificado d+)
+~~Serviço chega, manda em broadcast que chegou, objetos com a aplicação requisitam conexão? (simplificado d+)~~
 
-Os objetos já conhecem o serviço?
+> Objetos já conhecem o serviço e sabem se comunicar com ele
 
 ~~Wireshark/tcpdump pra investigar a rede?~~
 
@@ -104,24 +106,34 @@ gera:
 "lastModified": 1548007200
 ```
 
-Daria pra usar esses hubs e na "contratação" do serviço pedir esses tokens. Meio q centralizaria os hubs e gerenciaria as informações dos objetos, os hubs ainda continuariam sendo pra controle. **Abstrair?**
+Daria pra usar esses hubs e na "contratação" do serviço pedir esses tokens. Meio q centralizaria os hubs e gerenciaria as informações dos objetos, os hubs ainda continuariam sendo pra controle. **Abstrair**
 
 - Os objetos se conectam a aplicativos (hubs) ou conectam diretamente a uma aplicação (arduíno programado pra um endpoint)
 
 - No caso de se conectar a aplicativos, o proprio <nomeDoServiço> pode tentar se conectar dado o token (o sistema deve ser aberto nessa parte para se adaptar aos novos hubs existentes) (pode ser simplificado)
 - No caso de conexão direta o objeto tenta se conectar ao serviço com MQTT diretamente.
 
+> Acima é apenas uma ideia de melhoria, a priori vamos deixar que o serviço já saiba se comunicar com os objetos
+
 ## Atualização dos contextos
 
 Os hubs/objetos ativam um gatilho de envio da atualização do contexto e enviam uma mensagem HTTP/MQTT conforme a disponibilidade (priorizando MQTT).
 
-Poderia completar as informações usando o OD4CoT na primeira vez que o objeto chega ao serviço.
+As informações que os objetos terão será do OD4CoT.
 
 ## Distribuição de contexto
 
-Aqui teria que ter uma medida de segurança forte, no mínimo um token. É possível pra deixar simplificado ou nem usar nessa solução ingênua.
+Aqui teria que ter uma medida de segurança forte, no mínimo um token. É possível pra deixar simplificado ou nem usar nessa solução ingênua. **Nem usar**
 
 o serviço recebe requisições de informação e devolve o que foi solicitado.
 
 ex:
 Consumidor manda uma solicitação HTTP com um JSON formatado do que quer, o servidor de aplicação transforma isso em uma query no estilo RDF, realiza a query no DB, formata o resultado para um JSON e devolve pro Consumidor com HTTP ou MQTT.
+
+## TODO
+
+Deixar bem simples a ponto de ser uma solução ingênua
+
+abstrair o máximo possível.
+
+mão na massa
