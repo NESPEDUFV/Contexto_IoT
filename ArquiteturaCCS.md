@@ -36,7 +36,7 @@ O serviço deve conseguir fazer:
 
 - armazenamento de contexto
 
-- pesquisa e descoberta de contexto (?)
+- pesquisa e descoberta de contexto (abstraido)
 
 - difusão e distribuição de contexto.
 
@@ -48,7 +48,7 @@ O serviço deve conseguir fazer:
 
 - **Servidor de aplicação**: núcleo de processamento, gerência a troca de informações e os dados
 
-- **Servidor de dados**? (como mapear? usar rdf? usar tabelas normais?)
+- **Servidor de dados**? (como mapear? usar rdf? usar tabelas normais?) a priori SQLite
 
     usando RDF da pra usar fuseki-server. Pra se comunicar com ele podemos usar a API RESTful dele usando libcurl (#include <curl/curl.h>) em C++
 
